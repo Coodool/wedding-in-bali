@@ -1,0 +1,36 @@
+/* pages/help/help.wxss */
+
+.wrapper {
+  padding: 30rpx 0px;
+}
+
+.content {
+  background-color: #fff;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30rpx;
+}
+
+.hover {
+  background-color: #bfbfbf;
+}
+
+.divider {
+  height: 0px;
+  border-top: 1rpx solid #e8e8e8;
+  margin: 0px 30rpx;
+}
+
+image {
+  height: 32px;
+  width: 32px;
+  float: right;
+}
+
+.detail {
+  color: #8c8c8c;
+}

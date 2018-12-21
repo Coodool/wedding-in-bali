@@ -1,0 +1,35 @@
+/* pages/guest/guest.wxss */
+
+.section {
+  /* margin: 30rpx; */
+  background-color: #fff;
+  /* box-shadow: 0px 0px 5px #bfbfbf; */
+  /* border-radius: 5px; */
+  padding: 12px 30rpx;
+  display: flex;
+}
+
+.section:not(:last-child) {
+  border-bottom: 0.1px solid #e8e8e8;
+}
+
+image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.introduce {
+  flex-grow: 1;
+}
+
+.name {
+  margin-bottom: 6px;
+}
+
+.description {
+  text-align: justify;
+  color: #8c8c8c;
+  font-size: 14px;
+}

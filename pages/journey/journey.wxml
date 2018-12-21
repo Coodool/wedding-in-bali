@@ -1,0 +1,912 @@
+<view class="container">
+  <!-- 头部导航 -->
+  <swiper
+    current="{{current}}"
+    class="swiper-date"
+    duration="300"
+    bindchange="changeDate"
+    next-margin="260rpx"
+    previous-margin="260rpx"
+  >
+    <swiper-item wx:for="{{date}}" wx:key="unique" bindtap="clickDate" data-variable="{{index}}">
+      <view class='swiper-date-item {{index == current ? "active" : ""}}'>{{item}}</view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 每日详细计划 -->
+  <swiper
+    current="{{current}}"
+    class="swiper-content"
+    duration="300"
+    bindchange="changeDate"
+  >
+    <!-- Day 1 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+          <view class="list">
+            <view class="title">12:00 深圳集合，吃午餐</view>
+            <view>建议提前一天到深圳暂住。</view>
+
+
+            <view class="paragraph">
+              <view>巴厘岛位于南半球，时值夏天和雨季，出发前请准备好以下物品：</view>
+              <view>
+                <view><checkbox/><text>夏季换洗衣物</text></view>
+                <view><checkbox/><text>泳衣/泳裤/泳镜</text></view>
+                <view><checkbox/><text>防晒霜/防晒服/遮阳帽</text></view>
+                <view><checkbox/><text>涉水鞋</text></view>
+                <view><checkbox/><text>雨伞</text></view>
+                <view><checkbox/><text>常见药品</text></view>
+                <view><checkbox/><text>签字笔</text></view>
+                <view><checkbox/><text>美丽的心情</text></view>
+              </view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">13:00 出发前往香港</view>
+            <view class="paragraph">
+              <view>请提前准备好以下物品，过关需查验：</view>
+              <view>
+                <view><checkbox/><text>护照</text></view>
+                <view><checkbox/><text>机票行程单</text></view>
+                <view><checkbox/><text>酒店预定单</text></view>
+              </view>
+            </view>
+            <view class="ul">
+              <view class="highlight">注意事项</view>
+              <view class="ul-list">携带香烟不能超过19支</view>
+              <view class="ul-list">相机、笔记本等贵重电子物品需要提前申报</view>
+              <view class="ul-list">禁止携带生鲜的动植物入境，包括水果</view>
+              <view class="ul-list">禁止携带植物、肉、奶、蛋、水产及其衍生制品</view>
+              <view class="ul-list">入境处和海关请勿大声喧哗，禁止拍照</view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">16:00 到达机场，办理离境登机手续</view>
+            <view>国际航班需要提前三个小时值机。没有购买飞机餐，候机时先吃个晚饭，机场餐食较贵，请自备晚餐。</view>
+            <view class="ul">
+              <view class="highlight">香港离境流程</view>
+              <view class="ul-list">值机：凭护照和机票行程单换取登机牌</view>
+              <view class="ul-list">托运：托运大件行李、液体及其他危险品</view>
+              <view class="ul-list">安检：检查随身行李，电子产品及金属物品需要拿出单独过检</view>
+              <view class="ul-list">出境：检查护照、机票，盖离境章后进入候机厅</view>
+            </view>
+            <view class="ul">
+              <view class="highlight">注意事项</view>
+              <view class="ul-list">每人可以随身携带7kg行李登机</view>
+              <view class="ul-list">托运时要求航司行李直挂</view>
+              <view class="ul-list">随身携带的液体不能超过100毫升，否则需托运</view>
+              <view class="ul-list">雨伞必须托运，不能带上飞机</view>
+              <view class="ul-list">锂电池和充电器等不能托运</view>
+              <view class="ul-list">出境处和海关请勿大声喧哗，禁止拍照</view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">19:35 航班起飞</view>
+            <view>航班号5J119，飞行时间约2.5个小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/2.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/1.gif" />
+          </view>
+
+          <view class="list">
+            <view class="title">21:55 到达马尼拉机场，转机</view>
+            <view>下飞机后凭联程机票走国际转机通道，无需入境。如果行李直挂则不用重新托运行李，否则需要取行李并重新托运。到达和出发都在T3航站楼，等候时间约5小时。菲律宾的机场都比较冷，需要准备一件外套。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">3:50<view class="sub">+1</view> 第二程航班起飞</view>
+            <view>航班号5J279，飞行时间约4小时。飞机上空姐将会发放印尼入境卡和海关申报表。根据目前政策不需要填写印尼入境卡。如未携带高额货币或违禁品则无须填写海关申报表。</view>
+
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/6.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/2.gif" />
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- Day 2 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+          <view class="list">
+            <view class="title">7:50 到达目的地，办理入境</view>
+            <view>航班将降落在巴厘岛登巴萨机场。</view>
+            <view class="ul">
+              <view class="highlight">巴厘岛入境流程</view>
+              <view class="ul-list">入境：走免签通道，检查护照及机票行程单，盖入境章</view>
+              <view class="ul-list">取行李：在行李传送带上找自己的行李</view>
+              <view class="ul-list">海关安检：如果没有申报物品，走绿色通道即可</view>
+            </view>
+
+            <view class="ul">
+              <view class="highlight">注意事项</view>
+              <view class="ul-list">印尼对中国公民实行免签，入境时有免签柜台和落地签柜台(VOA)，记得走免签柜台</view>
+              <view class="ul-list">印尼政府比较腐败，工作人员可能会要求落地签来索贿，这个时候只要坚持说Visa Exemption即可</view>
+              <view class="ul-list">如果问起入境事由，回答For Travelling(旅行)即可</view>
+              <view class="ul-list">过安检是不需要给小费的，如果工作人员索要小费，装听不懂</view>
+              <view class="ul-list">入境处和海关请勿大声喧哗，禁止拍照</view>
+              <view class="ul-list">如果机场有陌生人来帮你搬运行李一定要即时拒绝，否则将要支付高额小费</view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">9:00 前往家乐福购物，吃早餐</view>
+            <view>Carrefour Shopping Mall采购零食酒水饮料等。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">11:00 库塔沙滩</view>
+            <view>在库塔沙滩休闲，注意防晒。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">12:30 回到机场</view>
+            <view>叶林的航班 MI5832 和李颖的航班 D7799 分别于11:50和12:15到，我们将返回机场接上他们一起行动。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">13:30 海鲜午餐</view>
+            <view>Bamboo Corner是库塔区小巷内一家口碑很好的海鲜餐馆，非常实惠，除海鲜外，还提供西餐及中国粤菜。</view>
+
+            <view class="paragraph">
+              <view>位置：Poppies Lane I No.26, Kuta - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 765966">电话：<text selectable="true">+62 361 765966</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{bambooCorner}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="bambooCorner" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+
+            <view class="ul">
+              <view class="highlight">菜单（仅供参考）</view>
+              <view class="ul-list">鸡肉/鱼肉薯条<text class="right">Rp 28k</text></view>
+              <view class="ul-list">牛排<text class="right">Rp 48k</text></view>
+              <view class="ul-list">鸡排/猪排/鱼排<text class="right">Rp 30k</text></view>
+              <view class="ul-list">各种中国炒饭<text class="right">Rp 20k</text></view>
+              <view class="ul-list">咖喱鸡/鱼<text class="right">Rp 25k</text></view>
+              <view class="ul-list">烤猪肉/鸡肉串<text class="right">Rp 25k</text></view>
+              <view class="ul-list">烧烤猪肋排<text class="right">Rp 38k</text></view>
+              <view class="ul-list">海鲜什锦<text class="right">Rp 85k</text></view>
+              <view class="ul-list">大对虾<text class="right">Rp 85k</text></view>
+              <view class="ul-list">秘制咖喱蟹<text class="right">Rp 60k</text></view>
+              <view class="ul-list">大龙虾<text class="right">Rp 150k</text></view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">14:30 出发前往酒店</view>
+            <view>今晚将住在位于Tabanan的Amarta Beach Retreat，车程约1.5小时。Amarta是一处私密的滨海别墅度假村，因为位置实在太过偏僻，所以附近没有任何的餐馆和杂货店。酒店共有十间别墅，我们预定了其中的七栋，基本承包了整个度假村。</view>
+
+            <view class="paragraph">
+              <view>地址：Banjar Pasut, Desa Tibubiu, Kerambitan, Tabanan - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 811 3997789">电话：<text selectable="true">+62 811 3997789</text></view>
+              <view>邮箱：<text selectable="true">info@amartaretreat.com</text></view>
+            </view>
+
+            <view class="paragraph">由于连日路途奔波劳累，故下午不做活动安排，体力充沛的朋友可以自行在海滩边或者泳池玩耍。需要注意的是，这里的海滩是不允许下海游泳冲浪的。</view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{amarta}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="amarta" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+
+          <view class="list">
+            <view class="title">18:00 吃年夜饭</view>
+            <view>晚上将在酒店内部餐厅用餐，饭前可以欣赏一下海边日落，饭后自行组织牌局或桌游，欢度除夕。</view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- Day 3 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+            <view class="list">
+              <view class="title">8:00 起床，吃早餐</view>
+              <view>今日将更换住宿酒店，需要收拾所有个人行李并退房。</view>
+            </view>
+
+          <view class="list">
+            <view class="title">10:00 离开酒店</view>
+            <view>前往巴厘岛南部的Uluwatu参加婚礼，路程约2~3小时。新郎和新娘将会提前乘坐另外一辆车先到达场地化妆彩排，其他人请跟随叶林去吃午餐及去酒店check-in。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">11:00 印尼午餐</view>
+            <view>午餐将安排在Seminyak的Naughty Nuri’s Seminyak，这家店在水明漾美食中排名第一，提供地道的美式烹饪，招牌菜是烤猪肋排，口碑非常好。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Mertanadi No.62 | Kerobokan, Seminyak - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 8476783">电话：<text selectable="true">+62 361 8476783</text></view>
+              <view>邮箱：<text selectable="true">info@naughtynurisseminyak.com</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{naughtyNuri}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="naughtyNuri" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+
+            <view class="ul">
+              <view class="highlight">菜单（仅供参考）</view>
+              <view class="ul-list">烤猪肋排<text class="right">Rp 153k</text></view>
+              <view class="ul-list">汉堡<text class="right">Rp 95k</text></view>
+              <view class="ul-list">烤鸡肉/猪肉串<text class="right">Rp 50k</text></view>
+              <view class="ul-list">芝士通心粉<text class="right">Rp 60k</text></view>
+              <view class="ul-list">猪肉汤<text class="right">Rp 85k</text></view>
+              <view class="ul-list">沙拉<text class="right">Rp 60k</text></view>
+              <swiper
+                indicator-dots="true"
+                circular="true"
+                autoplay="true"
+                interval="3000"
+                duration="600"
+                class="swiper-image"
+              >
+                <block wx:for="{{naughtyNuriMenu}}" wx:key="unique">
+                  <swiper-item bindtap="clickSwiperImage" data-name="naughtyNuriMenu" data-index="{{index}}">
+                    <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                  </swiper-item>
+                </block>
+              </swiper>
+            </view>
+
+
+          </view>
+
+          <view class="list">
+            <view class="title">12:30 出发前往酒店</view>
+            <view>今晚将住在Uluwatu的Le Grande Bali，这个酒店建立在高尔夫球场旁边，设施比较完善，到达酒店check-in后可以稍作休息。</view>
+
+            <view class="paragraph">
+              <view>地址：Block 5, Pecatu Indah Resort. Jl. Raya Uluwatu -  Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 8481388">电话：<text selectable="true">+62 361 8481388</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{leGrande}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="leGrande" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+
+          <view class="list">
+            <view class="title">14:00 前往婚礼场地</view>
+            <view>婚礼将在Uluwatu南部悬崖边的Ocean Wedding Chapel举行。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Baya Uluwatu, Br. Dinas Karang Boma, Desa Pecatu - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 4725386">电话：<text selectable="true">+62 361 4725386</text></view>
+              <view>邮箱：<text selectable="true">public@oceanbali.com</text></view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">14:30 就位入席</view>
+          </view>
+
+          <view class="list">
+            <view class="title">15:00 婚礼仪式</view>
+            <view class="ul wedding">
+              <view class="highlight">仪式流程</view>
+              <view class="center">牧师致辞</view>
+              <view class="center">许下承诺</view>
+              <view class="center">交换誓言</view>
+              <view class="center">交换对戒</view>
+              <view class="center">宣布结为夫妻</view>
+              <view class="center">签署结婚证书</view>
+              <view class="center">撒花</view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">15:30 仪式结束</view>
+            <view>嘉宾可在场地内自由拍摄合影。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">16:30 返回酒店</view>
+            <view>到达酒店后可稍作休息，等日落后开始晚宴。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">18:30 婚礼晚宴</view>
+            <view>晚宴将在Le Grande酒店内举行。</view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- Day 4 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+          <view class="list">
+            <view class="title">7:00 起床，吃早餐</view>
+            <view>今日将更换住宿酒店，请在吃完早餐后收拾所有个人行李并退房。漂流项目是含酒店接送的，退房后在大厅等待接车，出发前请随身携带两套干净衣服、涉水鞋以及防水背包。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">8:00 出发前往漂流点</view>
+            <view>漂流点位于巴厘岛东部的Telega Waja River，靠近阿贡火山，车程约2个小时，到达特拉噶河后还需要逆流徒步一段时间才能到达漂流起点。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">10:00 T河漂流</view>
+
+            <view class="ul">
+              <view class="highlight">漂流注意事项</view>
+              <view class="ul-list">漂流行程约2个小时</view>
+              <view class="ul-list">水流较湍急，会全身湿透，建议穿涉水鞋和泳衣</view>
+              <view class="ul-list">漂流完之后需要给教练小费</view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">13:00 自助午餐</view>
+            <view>漂流结束后洗浴换上干衣服，然后享用自助午餐，饭后将会出发游玩下一个项目。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">14:30 ATV越野骑行</view>
+            <view>越野行程约1.5小时。</view>
+
+            <view class="ul">
+              <view class="highlight">ATV注意事项</view>
+              <view class="ul-list">ATV属于冒险运动，身体不适者不宜参加</view>
+              <view class="ul-list">行程中会弄脏衣服，请自备换洗衣物</view>
+              <view class="ul-list">风景好的地方可以停下来拍照</view>
+              <view class="ul-list">骑行结束后需要给教练小费</view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">16:00 返回酒店</view>
+            <view>今晚将住在Ubud的Pertiwi Bisma 1的独栋小别墅，车程约1小时。酒店位于山谷旁边，景色十分优美，闲暇时可以好好体验一下酒店的无边泳池，可以在俯瞰整个山谷的景色。酒店还提供前往乌布市场的免费定时班车服务。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Bisma, Ubud - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 978018">电话：<text selectable="true">+62 361 978018</text></view>
+              <view>邮箱：<text selectable="true">rsvpbisma1@pertiwihotels.com</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{pertiwiBisma}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="pertiwiBisma" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+
+          <view class="list">
+            <view class="title">18:00 印尼料理</view>
+            <view>在酒店check in及放置行李后，步行到乌布中心市区的Fair Warung Bale吃晚饭。这家店是一家非营利性餐馆，其所有的利润将用于支持贫困社区的健康和医疗项目。比较特别的是，这家参观不用纳税，也不收小费。餐馆位于二楼，如果时间合适是可以看到日落的。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Sriwedari No.6, Ubud - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 975370">电话：<text selectable="true">+62 361 975370</text></view>
+              <view>邮箱：<text selectable="true">warungbale@fairfuturefoundation.org</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{warungBale}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="warungBale" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+
+            <view class="ul">
+              <view class="highlight">菜单（仅供参考）</view>
+              <view class="ul-list">大明虾/甜虾/咖喱虾饭<text class="right">Rp 110k</text></view>
+              <view class="ul-list">吞拿鱼/鲯鳅鱼金枪鱼饭<text class="right">Rp 95k</text></view>
+              <view class="ul-list">咖喱鸡/咖喱鱼/香辣鸡饭<text class="right">Rp 75k</text></view>
+              <view class="ul-list">素食米饭<text class="right">Rp 75k</text></view>
+              <view class="ul-list">三明治类<text class="right">Rp 60k</text></view>
+              <view class="ul-list">沙拉<text class="right">Rp 45k / 75k</text></view>
+              <swiper
+                indicator-dots="true"
+                circular="true"
+                autoplay="true"
+                interval="3000"
+                duration="600"
+                class="swiper-image"
+                style="height: 480px;"
+              >
+                <block wx:for="{{warungBaleMenu}}" wx:key="unique">
+                  <swiper-item bindtap="clickSwiperImage" data-name="warungBaleMenu" data-index="{{index}}">
+                    <image mode="aspectFill" src="{{item}}" style="width: 100%; height: 480px;"/>
+                  </swiper-item>
+                </block>
+              </swiper>
+            </view>
+
+          </view>
+
+          <view class="list">
+            <view class="title">20:00 印尼特色大保健</view>
+            <view>回酒店的路上有很多SPA按摩店，价格也比较实惠，值得体验一下当地按摩手法。</view>
+
+            <view class="ul">
+              <view class="highlight">参考价目</view>
+              <view class="ul-list">全身按摩<text class="right">Rp 135k / 90min</text></view>
+              <view class="ul-list">草药按摩<text class="right">Rp 220k / 75min</text></view>
+              <view class="ul-list">热石按摩<text class="right">Rp 150k / 90min</text></view>
+              <view class="ul-list">蜡烛按摩<text class="right">Rp 150k / 60min</text></view>
+              <view class="ul-list">热竹按摩<text class="right">Rp 180k / 70min</text></view>
+              <view class="ul-list">足底按摩<text class="right">Rp 75k / 60min</text></view>
+              <view class="ul-list">头部按摩<text class="right">Rp 40k / 15min</text></view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- Day 5 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+
+          <view class="list">
+            <view class="title">7:00 起床，吃早餐</view>
+          </view>
+
+          <view class="list">
+            <view class="title">8:00 出发前往潜水点</view>
+            <view>潜点位于巴厘岛北部的Tulanben，车程约2个小时。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">10:30 深潜教学</view>
+            <view>抵达Tulanben后，将在潜水中心填写资料、试穿潜水装备，会有简单教学讲解（有中文翻译），并在泳池内进行基础潜水技巧教学训练。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">11:00 一潜</view>
+            <view>潜点为二战时期自由号沉船，时间约30分钟。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">12:00 午餐</view>
+            <view>午餐将由潜水中心提供。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">13:30 二潜</view>
+            <view>潜点为珊瑚花园，时间约30分钟。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">14:30 返回酒店</view>
+          </view>
+
+          <view class="list">
+            <view class="title">18:00 亚洲素食</view>
+            <view>Herb Library是一家素食餐馆，开了这么多天的荤，今天换点清淡的口味尝尝。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Jembawan 1, Ubud - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 9083289">电话：<text selectable="true">+62 361 9083289</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{herbLibrary}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="herbLibrary" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- Day 6 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+
+          <view class="list">
+            <view class="title">8:00 起床，吃早餐</view>
+            <view>今日将更换住宿酒店，需要收拾所有个人行李并退房。请换上涉水鞋，并准备一套干衣服，今日行程中可能会涉水。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">10:00 游玩乌布皇宫和乌布市场</view>
+            <view class="paragraph">乌布皇宫(Ubud Palace)是乌布地区最著名的地标，始建于16世纪。因为仍有皇族居住，所以皇宫内有部分区域是不对外开放的。每晚7点开始有专业的巴厘传统舞蹈表演，门票IDR 80k/人。</view>
+
+            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/palace.jpg" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/palace.jpg" style="width: 100%;"/>
+
+            <view class="paragraph">乌布市场（Ubud Market)就在乌布皇宫的对面，售卖印尼特色衣服饰品和工艺品，逛逛就行了，如果要买的话一定要讲价，对折砍起，三折成交。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">11:30 印尼料理</view>
+            <view>Balinese Home Cooking是一家口碑很好的农家乐，远离闹市，环境优雅，价格实惠，适合团体用餐。</view>
+
+
+            <view class="paragraph">
+              <view>地址：Jl.Rsi Markandya II. No.20 Br.Payogan, Kedewatan, Ubud - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 812 3949 274">电话：<text selectable="true">+62 812 3949 274</text></view>
+              <view>邮箱：<text selectable="true">sukrisna@ymail.com</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{balineseHomeCooking}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="balineseHomeCooking" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+
+            <view class="ul">
+              <view class="highlight">菜单（仅供参考）</view>
+              <view class="ul-list">鸡肉饭<text class="right">Rp 45k</text></view>
+              <view class="ul-list">咖喱鸡饭<text class="right">Rp 50k</text></view>
+              <view class="ul-list">猪肋排饭<text class="right">Rp 65k</text></view>
+              <view class="ul-list">肉串饭<text class="right">Rp 50k</text></view>
+              <view class="ul-list">沙拉<text class="right">Rp 30k / 75k</text></view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">12:30 梯田/圣泉寺/峡谷瀑布</view>
+
+            <view class="paragraph">
+              德格拉郎梯田(Tegalalang Rice Terrace)是乌布最出名的梯田，鳞次栉比的田野之间点缀着椰树，是个拍照打卡的好地方。门票Rp 10k，买了门票之后路上还会不断有当地居民拦路收费，适当给些零用钱就可以。我们不需要逛完整个景点，频繁遇到村民拦路卡点就折返。
+            </view>
+
+            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/Terrace.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/Terrace.png" style="width: 100%;"/>
+
+            <view class="paragraph">
+              圣泉寺(Pura Tirta Empul)是巴厘岛最著名的寺庙之一，依地下的泉眼而建，因此而得名。据说远古时有巫师在水中下毒毒害村民，大神因陀罗以矛刺地涌出泉水，解救了村民，这就是圣泉的来历。附近居民每天早、中、晚三次来此沐浴祈福。门票Rp 15k。
+            </view>
+
+            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/Tirta_Empul.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/Tirta_Empul.png" style="width: 100%;"/>
+
+            <view class="ul">
+              <view class="highlight">注意事项</view>
+              <view class="ul-list">想尝试沐浴洗礼的提前准备好下水的鞋服，水位及胸</view>
+              <view class="ul-list">圣泉寺的泉水是从地下涌出的，水温较凉</view>
+              <view class="ul-list">女性生理期是不允许进入寺庙的</view>
+              <view class="ul-list">进入寺庙必须穿过膝的裤子或裙子，寺庙门口可以自愿捐赠租用纱笼</view>
+            </view>
+
+            <view class="paragraph">Tukad Cepung Waterfall是一处幽静的洞穴瀑布，需要涉水跋涉一段路程才能到达这里，如果赶上正午阳光从洞口射入的时候景色更加震撼。门票Rp 15k。</view>
+
+            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/waterfall.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/waterfall.png" style="width: 100%;"/>
+          </view>
+
+          <view class="list">
+            <view class="title">16:00 木雕村/银器村/蜡染村 (可选)</view>
+            <view>在从乌布回到库塔区的路上将会依次经过木雕村(Mas Village)、银器村(Celuk Village)、蜡染村(Bali Bidadari Batik)，如果有多余的时间就稍作停留。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">17:00 返回酒店</view>
+            <view>今晚将入住Kuta市区的Hotel NEO+ Kuta Legian，酒店附近街区夜生活非常丰富。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Troppozone no.8, Legian, Kuta - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 8499666">电话：<text selectable="true">+62 361 8499666</text></view>
+              <view>邮箱：<text selectable="true">Legianinfo@neohotels.com</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{neo}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="neo" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+
+          <view class="list">
+            <view class="title">18:00 自助晚餐</view>
+            <view>晚上将在巴厘岛大名鼎鼎的空中花园酒吧(Sky Garden)吃晚餐，这家酒吧在17点到21点之间提供自助用餐，价格Rp 115k/人。21点之后开启夜场狂欢，入场价格Rp 250k/人。酒吧共有四层楼，每一层的音乐和氛围都不一样，顶层的气氛最燃最嗨，记得提前抢占好的位置。</view>
+
+            <view class="ul">
+              <view class="ul-list">如果21点之前入场，可以一直待到凌晨</view>
+              <view class="ul-list">21点之后购票入场送一杯酒</view>
+              <view class="ul-list">21点到23点之间女神入场免费</view>
+            </view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Raya Legian No.61, Kuta - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 361 755423">电话：<text selectable="true">+62 361 755423</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{skyGarden}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="skyGarden" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- Day 7 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+          <view class="list">
+            <view class="title">9:00 起床，吃早餐</view>
+          </view>
+
+          <view class="list">
+            <view class="title">10:00 库塔海滩冲浪或水上乐园</view>
+            <view >今天没有做详细的行程安排，大家可以根据体力情况自行选择出玩，可以去库塔沙滩(Kuta Beach)冲浪，也可以选择去水上公园(Waterbom Bali)玩，门票价格约220RMB/人。</view>
+
+            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/waterbom.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Scenic-Spot/waterbom.png" style="width: 100%;margin-top: 12px;"/>
+          </view>
+
+          <view class="list">
+            <view class="title">12:00 印尼料理</view>
+            <view>中午将在Warung Chef Bagus用餐，这家印尼餐馆是库塔区排名第二的美食。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Bakung Sari No.43, Kuta - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 821 4634 8525">电话：<text selectable="true">+62 821 4634 8525</text></view>
+              <view>邮箱：<text selectable="true">info@warungchefbagus.com</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{warungChefBagus}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="warungChefBagus" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+
+            <view class="ul">
+              <view class="highlight">菜单（仅供参考）</view>
+              <view class="ul-list">巴厘猪肉套餐<text class="right">Rp 95k</text></view>
+              <view class="ul-list">烤猪肋排A套餐400g/250g<text class="right">Rp 135k/90k</text></view>
+              <view class="ul-list">烤猪肋排B套餐400g/250g<text class="right">Rp 195k/135k</text></view>
+              <view class="ul-list">烤猪肋排C套餐400g/250g<text class="right">Rp 210k/135k</text></view>
+              <view class="ul-list">烤鱼排<text class="right">Rp 120k</text></view>
+              <view class="ul-list">鸡肉套餐<text class="right">Rp 120k</text></view>
+              <view class="ul-list">混合海鲜串<text class="right">Rp 125k</text></view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">13:00 逛街采购</view>
+            <view>下午可以在各大商场采购印尼特产和纪念品，如百货商场(Mal Bali Galeria)、 家乐福(Carrefour Shopping Mall)、DFS免税店。值得采购的商品包括：手工皂、精油、蜡染、银饰、木雕、石雕、POLO衫、化妆品。</view>
+            <view class="paragraph">可以采购一些食品以备第二天中午转机时作为午餐。</view>
+          </view>
+
+
+          <view class="list">
+            <view class="title">18:00 最后的晚餐</view>
+            <view>在印尼的最后一顿晚宴将在Yogi's Paradise and Grill进行，这是一家又贵又好吃的海鲜餐厅。</view>
+
+            <view class="paragraph">
+              <view>地址：Jl. Legian Kelod No.400, Kuta - Bali, Indonesia</view>
+              <view bindtap="makeCall" data-number="0062 813 3827 6781">电话：<text selectable="true">+62 813 3827 6781</text></view>
+              <view>邮箱：<text selectable="true">inekeende@yahoo.co.id</text></view>
+            </view>
+
+            <swiper
+              indicator-dots="true"
+              circular="true"
+              autoplay="true"
+              interval="3000"
+              duration="600"
+              class="swiper-image"
+            >
+              <block wx:for="{{yogis}}" wx:key="unique">
+                <swiper-item bindtap="clickSwiperImage" data-name="yogis" data-index="{{index}}">
+                  <image mode="aspectFill" src="{{item}}" style="width: 100%;"/>
+                </swiper-item>
+              </block>
+            </swiper>
+
+            <view class="ul">
+              <view class="highlight">菜单（仅供参考）</view>
+              <view class="ul-list">海鲜组合🐙<text class="right">Rp 250k</text></view>
+              <view class="ul-list">蒜蓉虾王<text class="right">Rp 295k</text></view>
+              <view class="ul-list">渔夫篮<text class="right">Rp 450k</text></view>
+              <view class="ul-list">辣椒蟹🦀<text class="right">Rp 450k</text></view>
+              <view class="ul-list">海螯虾<text class="right">Rp 110k / 100g</text></view>
+              <view class="ul-list">猪肋排🐖<text class="right">Rp 225k / 500g</text></view>
+            </view>
+          </view>
+
+
+          <view class="list">
+            <view class="title">20:00 收拾行李，休息</view>
+            <view>由于第二天凌晨要赶飞机，请早点休息。</view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- Day 8 -->
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class="content">
+          <view class="list">
+            <view class="title">4:30 起床，吃早餐</view>
+          </view>
+
+          <view class="list">
+            <view class="title">5:00 出发前往机场</view>
+          </view>
+
+          <view class="list">
+            <view class="title">5:30 到达机场，办理离境登机手续</view>
+            <view class="ul">
+              <view class="highlight">巴厘岛出境流程</view>
+              <view class="ul-list">值机：凭护照和机票行程单换取登机牌</view>
+              <view class="ul-list">托运：托运大件行李、液体及其他危险品</view>
+              <view class="ul-list">安检：检查随身行李，电子产品及金属物品需要单独过检</view>
+              <view class="ul-list">出境：检查护照、机票，盖离境章后进入候机厅</view>
+            </view>
+
+            <view class="ul">
+              <view class="highlight">注意事项</view>
+              <view class="ul-list">离境税已经包含在机票中了，无须额外缴纳</view>
+              <view class="ul-list">珊瑚，贝壳等不能带走</view>
+              <view class="ul-list">水果可以带出境，但是在中国入不了境</view>
+              <view class="ul-list">每人可以随身携带7kg行李登机</view>
+              <view class="ul-list">托运时要求航司行李直挂</view>
+              <view class="ul-list">随身携带的液体不能超过100毫升，否则需托运</view>
+              <view class="ul-list">雨伞必须托运，不能带上飞机</view>
+              <view class="ul-list">锂电池和充电器等不能托运</view>
+              <view class="ul-list">出境处和海关请勿大声喧哗，禁止拍照</view>
+            </view>
+          </view>
+
+          <view class="list">
+            <view class="title">8:35 航班起飞</view>
+            <view>航班号5J280，飞行时间约4小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
+
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/11.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/3.gif" />
+
+          </view>
+
+          <view class="list">
+            <view class="title">12:45 到达马尼拉机场，转机</view>
+            <view>下飞机后凭联程机票走国际转机通道，无需入境。如果行李直挂则不用重新托运行李，否则需要取行李并重新托运。到达和出发都在T3航站楼。等候时间约2小时。菲律宾的机场都比较冷，需要准备一件外套。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">15:35 第二程航班起飞</view>
+            <view>航班号5J118，飞行时间约2.5小时。飞机上空姐将会发放旅客抵港申报表、旅客离港申报表和海关申报表。根据实际情况填写抵港申报表。如未携带高额货币或违禁品则无须填写海关申报表。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">18:05 抵达香港</view>
+            <view class="ul">
+              <view class="highlight">香港入境流程</view>
+              <view class="ul-list">入境：检查护照和抵港申报表，盖入境章</view>
+              <view class="ul-list">取行李：在行李传送带上找自己的行李</view>
+              <view class="ul-list">海关安检：如果没有申报物品，走绿色通道即可</view>
+            </view>
+
+            <view class="ul">
+              <view class="highlight">注意事项</view>
+              <view class="ul-list">携带香烟不能超过19支</view>
+              <view class="ul-list">相机、笔记本等贵重电子物品需要提前申报</view>
+              <view class="ul-list">禁止携带生鲜的动植物入境，包括水果</view>
+              <view class="ul-list">禁止携带植物、肉、奶、蛋、水产及其衍生制品。</view>
+              <view class="ul-list">入境处和海关请勿大声喧哗，禁止拍照</view>
+            </view>
+
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/15.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Air-Line/4.gif" />
+          </view>
+
+          <view class="list">
+            <view class="title">19:00 回到深圳</view>
+            <view>过关时提交离港申报表。</view>
+          </view>
+
+          <view class="list">
+            <view class="title">返回温暖的家</view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
+
+</view>

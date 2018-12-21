@@ -1,0 +1,14 @@
+<!--pages/guest/guest.wxml-->
+<view class="container">
+
+  <view class="section" wx:for="{{list}}" wx:key="unique">
+    <view class="image-container">
+      <image mode="aspectFill" src="{{item.image}}" bindtap="clickImage" data-variable="{{item.image}}"/>
+    </view>
+    <view class="introduce">
+      <view class="name">{{item.name}}</view>
+      <view class="description">{{item.description}}</view>
+    </view>
+  </view>
+
+</view>

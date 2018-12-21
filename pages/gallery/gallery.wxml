@@ -1,0 +1,18 @@
+<view class="container">
+  <block wx:for="{{list}}" wx:key="unique">
+    <view class="section">
+      <view class="date-wrapper">
+        <text class="date">{{item.date}}</text>
+      </view>
+      <view class="card" bindtap="clickImage" data-variable="{{item.images}}">
+        <view class="image-wrapper">
+          <image mode="aspectFill" src="{{item.images[0]}}"/>
+        </view>
+        <view class="info">
+          <view class="location">{{item.location}}</view>
+          <view class="num">共 {{item.images.length}} 张</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,46 @@
+/* pages/gallery/gallery.wxss */
+.section {
+  padding: 16px 30rpx 0px;
+}
+
+.section:last-of-type {
+  padding-bottom: 16px;
+}
+
+.date-wrapper {
+  text-align: center;
+  margin: 0 auto 8px;
+}
+
+.date {
+  color: #fafafa;
+  display: inline-block;
+  padding: 0px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 2em;
+  background-color: #bfbfbf;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  height: 240px;
+}
+
+image {
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  padding: 0px 16px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}

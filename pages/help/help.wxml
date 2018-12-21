@@ -1,0 +1,19 @@
+<!--pages/help/help.wxml-->
+<view class="container">
+  <view class="wrapper">
+    <view class="content">
+      <block wx:for="{{list}}" wx:key="unique">
+        <view class="list" data-variable="{{item.phone}}" bindtap="onCall" hover-class="hover" hover-start-time="0" hover="true">
+          <view>
+            <view class="title">{{item.title}}</view>
+            <view class="detail">{{item.text}}</view>
+          </view>
+          <image src="/images/call.png"/>
+        </view>
+        <block wx:if="{{index != list.length-1}}">
+          <view class="divider"></view>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>

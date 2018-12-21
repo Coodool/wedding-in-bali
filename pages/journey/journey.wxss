@@ -1,0 +1,76 @@
+.swiper-date {
+  text-align: center;
+  background-color: #262626;
+  height: 48px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+}
+
+.swiper-date-item {
+  line-height: 48px;
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+.swiper-date-item.active {
+  font-size: 22px;
+  color: #e8e8e8;
+}
+
+
+.swiper-content {
+  height: 100%;
+}
+
+.scroll-container {
+  margin-top: 48px;
+  height: calc(100% - 48px);
+}
+
+.content {
+  padding: 10px 0px;
+}
+
+.list {
+  line-height: 1.8em;
+  color: #595959;
+
+  background-color: #fff;
+  padding: 16px 30rpx ;
+}
+
+.list:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+/* .list:not(:last-of-type) {
+  border-bottom: 1rpx solid #bfbfbf;
+} */
+
+.title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.sub {
+  display: inline-block;
+  font-size: 10px;
+  vertical-align: text-top;
+}
+
+.swiper-image {
+  height: 240px;
+  margin-top: 12px;
+}
+
+.wedding {
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100px, 100px;
+  background-position: left bottom, right top;
+  background-image: url("https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/wedding-bg-bottom.png"), url("https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/wedding-bg-top.png");
+  padding: 36px 0px;
+}
