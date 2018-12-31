@@ -71,6 +71,6 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 100px, 100px;
   background-position: left bottom, right top;
-  background-image: url("https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/wedding-bg-bottom.png"), url("https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/wedding-bg-top.png");
+  background-image: url("https://wx-1256884783.picgz.myqcloud.com/Journey/wedding-bg-bottom.png!minimize"), url("https://wx-1256884783.picgz.myqcloud.com/Journey/wedding-bg-top.png!minimize");
   padding: 36px 0px;
 }

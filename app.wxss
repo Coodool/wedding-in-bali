@@ -8,6 +8,10 @@ page {
   text-align: justify;
 }
 
+.title + .paragraph {
+  margin-top: 4px;
+}
+
 .page-title {
   line-height: 48px;
   background-color: #262626;

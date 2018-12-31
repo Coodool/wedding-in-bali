@@ -88,7 +88,7 @@
           <view class="list">
             <view class="title">19:35 航班起飞</view>
             <view>航班号5J119，飞行时间约2.5个小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/2.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/1.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/2.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/1.gif" />
           </view>
 
           <view class="list">
@@ -100,7 +100,7 @@
             <view class="title">3:50<view class="sub">+1</view> 第二程航班起飞</view>
             <view>航班号5J279，飞行时间约4小时。飞机上空姐将会发放印尼入境卡和海关申报表。根据目前政策不需要填写印尼入境卡。如未携带高额货币或违禁品则无须填写海关申报表。</view>
 
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/6.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/2.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/6.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/2.gif" />
           </view>
         </view>
       </scroll-view>
@@ -576,7 +576,7 @@
             <view class="title">10:00 游玩乌布皇宫和乌布市场</view>
             <view class="paragraph">乌布皇宫(Ubud Palace)是乌布地区最著名的地标，始建于16世纪。因为仍有皇族居住，所以皇宫内有部分区域是不对外开放的。每晚7点开始有专业的巴厘传统舞蹈表演，门票IDR 80k/人。</view>
 
-            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/palace.jpg" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/palace.jpg" style="width: 100%;"/>
+            <image mode="aspectFill" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/palace.jpg!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/palace.jpg!thumbnail" style="width: 100%;"/>
 
             <view class="paragraph">乌布市场（Ubud Market)就在乌布皇宫的对面，售卖印尼特色衣服饰品和工艺品，逛逛就行了，如果要买的话一定要讲价，对折砍起，三折成交。</view>
           </view>
@@ -624,13 +624,13 @@
               德格拉郎梯田(Tegalalang Rice Terrace)是乌布最出名的梯田，鳞次栉比的田野之间点缀着椰树，是个拍照打卡的好地方。门票Rp 10k，买了门票之后路上还会不断有当地居民拦路收费，适当给些零用钱就可以。我们不需要逛完整个景点，频繁遇到村民拦路卡点就折返。
             </view>
 
-            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/Terrace.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/Terrace.png" style="width: 100%;"/>
+            <image mode="aspectFill" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/Terrace.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/Terrace.png!thumbnail" style="width: 100%;"/>
 
             <view class="paragraph">
               圣泉寺(Pura Tirta Empul)是巴厘岛最著名的寺庙之一，依地下的泉眼而建，因此而得名。据说远古时有巫师在水中下毒毒害村民，大神因陀罗以矛刺地涌出泉水，解救了村民，这就是圣泉的来历。附近居民每天早、中、晚三次来此沐浴祈福。门票Rp 15k。
             </view>
 
-            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/Tirta_Empul.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/Tirta_Empul.png" style="width: 100%;"/>
+            <image mode="aspectFill" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/Tirta_Empul.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/Tirta_Empul.png!thumbnail" style="width: 100%;"/>
 
             <view class="ul">
               <view class="highlight">注意事项</view>
@@ -642,7 +642,7 @@
 
             <view class="paragraph">Tukad Cepung Waterfall是一处幽静的洞穴瀑布，需要涉水跋涉一段路程才能到达这里，如果赶上正午阳光从洞口射入的时候景色更加震撼。门票Rp 15k。</view>
 
-            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/waterfall.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/waterfall.png" style="width: 100%;"/>
+            <image mode="aspectFill" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterfall.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterfall.png!thumbnail" style="width: 100%;"/>
           </view>
 
           <view class="list">
@@ -722,7 +722,7 @@
             <view class="title">10:00 库塔海滩冲浪或水上乐园</view>
             <view >今天没有做详细的行程安排，大家可以根据体力情况自行选择出玩，可以去库塔沙滩(Kuta Beach)冲浪，也可以选择去水上公园(Waterbom Bali)玩，门票价格约220RMB/人。</view>
 
-            <image mode="aspectFill" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/waterbom.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Scenic-Spot/waterbom.png" style="width: 100%;margin-top: 12px;"/>
+            <image mode="aspectFill" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterbom.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterbom.png!thumbnail" style="width: 100%;margin-top: 12px;"/>
           </view>
 
           <view class="list">
@@ -855,7 +855,7 @@
             <view class="title">8:35 航班起飞</view>
             <view>航班号5J280，飞行时间约4小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
 
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/11.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/3.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/11.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/3.gif" />
 
           </view>
 
@@ -887,7 +887,7 @@
               <view class="ul-list">入境处和海关请勿大声喧哗，禁止拍照</view>
             </view>
 
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/15.png" bindtap="clickImage" src="https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/Journey/Air-Line/4.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/15.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/4.gif" />
           </view>
 
           <view class="list">

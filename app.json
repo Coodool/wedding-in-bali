@@ -1,15 +1,16 @@
 {
-  "pages":[
+  "pages": [
+    "pages/index/index",
     "pages/journey/journey",
     "pages/guest/guest",
     "pages/gallery/gallery",
     "pages/help/help"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#262626",
     "navigationBarTitleText": "巴厘岛婚礼",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#595959",
@@ -17,6 +18,12 @@
     "borderStyle": "black",
     "backgroundColor": "#f5f5f5",
     "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/gray-index.png",
+        "selectedIconPath": "images/selected-index.png"
+      },
       {
         "pagePath": "pages/journey/journey",
         "text": "旅程",
