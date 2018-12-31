@@ -19,12 +19,6 @@
     "backgroundColor": "#f5f5f5",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "images/gray-index.png",
-        "selectedIconPath": "images/selected-index.png"
-      },
-      {
         "pagePath": "pages/journey/journey",
         "text": "旅程",
         "iconPath": "images/gray-journey.png",

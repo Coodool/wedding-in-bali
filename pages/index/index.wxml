@@ -1,1 +1,4 @@
 <!--pages/guest/guest.wxml-->
+<view class="container" bindtap="enter">
+
+</view>
