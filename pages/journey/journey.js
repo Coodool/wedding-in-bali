@@ -147,4 +147,14 @@ Page({
       phoneNumber: event.currentTarget.dataset.number
     })
   },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title: 'Thanks for Attending',
+      imageUrl: 'https://wx-1256884783.picgz.myqcloud.com/transpond.jpg'
+    }
+  }
 })

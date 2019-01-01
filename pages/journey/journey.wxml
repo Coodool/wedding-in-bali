@@ -88,7 +88,7 @@
           <view class="list">
             <view class="title">19:35 航班起飞</view>
             <view>航班号5J119，飞行时间约2.5个小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/2.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/1.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/1.gif" />
           </view>
 
           <view class="list">
@@ -100,7 +100,7 @@
             <view class="title">3:50<view class="sub">+1</view> 第二程航班起飞</view>
             <view>航班号5J279，飞行时间约4小时。飞机上空姐将会发放印尼入境卡和海关申报表。根据目前政策不需要填写印尼入境卡。如未携带高额货币或违禁品则无须填写海关申报表。</view>
 
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/6.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/2.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/2.gif" />
           </view>
         </view>
       </scroll-view>
@@ -855,7 +855,7 @@
             <view class="title">8:35 航班起飞</view>
             <view>航班号5J280，飞行时间约4小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
 
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/11.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/3.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/3.gif" />
 
           </view>
 
@@ -887,7 +887,7 @@
               <view class="ul-list">入境处和海关请勿大声喧哗，禁止拍照</view>
             </view>
 
-            <image mode="widthFix" style="width: 100%;margin-top:12px;" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/15.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/4.gif" />
+            <image mode="widthFix" style="width: 100%;margin-top:12px;" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Air-Line/4.gif" />
           </view>
 
           <view class="list">
