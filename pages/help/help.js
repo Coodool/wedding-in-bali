@@ -97,7 +97,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: 'Thanks for Attending',
-      imageUrl: 'https://wx-1256884783.picgz.myqcloud.com/transpond.jpg'
+      imageUrl: 'https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/transpond.jpg'
     }
   }
 })
