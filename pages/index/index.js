@@ -1,14 +1,32 @@
 // pages/index/index.js
+const app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    hasUserInfo: true
   },
 
-  enter: function (e) {
+  clickBG: function (e) {
+    if( this.data.hasUserInfo ){
+      this.enter();
+    }
+  },
+
+  bindGetUserInfo: function (e) {
+    if( e.detail.userInfo ){
+      //记录用户登陆日志
+      wx.cloud.init({
+        traceUser: true
+      })
+    }
+    this.enter();
+  },
+
+  enter: function() {
     wx.switchTab({
       url: '/pages/journey/journey'
     });
@@ -18,12 +36,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.timer = setTimeout(function(){
-      wx.switchTab({
-        url: '/pages/journey/journey'
-      });
-    }, 3000)
+    wx.getUserInfo({
+      success: res => {
+        wx.cloud.init({
+          traceUser: true
+        })
 
+        this.setData({
+          hasUserInfo: true
+        })
+
+        this.timer = setTimeout(function(){
+          wx.switchTab({
+            url: '/pages/journey/journey'
+          });
+        }, 2000);
+      },
+      fail: res => {
+        this.setData({
+          hasUserInfo: false
+        })
+      }
+    })
   },
 
   /**
@@ -51,7 +85,9 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    clearTimeout(this.timer);
+    if( this.timer ){
+      clearTimeout(this.timer);
+    }
   },
 
   /**

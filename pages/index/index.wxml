@@ -1,4 +1,9 @@
 <!--pages/guest/guest.wxml-->
-<view class="container" bindtap="enter">
-
+<view class="container" bindtap="clickBG">
+  <view wx:if="{{!hasUserInfo}}">
+    <view class="btn-wrapper">
+      <button class="btn" open-type="getUserInfo"
+  bindgetuserinfo="bindGetUserInfo">点击进入</button>
+    </view>
+  </view>
 </view>
