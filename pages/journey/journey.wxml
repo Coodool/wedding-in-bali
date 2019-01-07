@@ -366,17 +366,20 @@
           </view>
 
           <view class="list">
-            <view class="title">8:00 出发前往漂流点</view>
+            <view class="title">7:30 酒店大堂集合，前往漂流点</view>
             <view>漂流点位于巴厘岛东部的Telega Waja River，靠近阿贡火山，车程约2个小时，到达特拉噶河后还需要逆流徒步一段时间才能到达漂流起点。</view>
           </view>
 
           <view class="list">
             <view class="title">10:00 T河漂流</view>
+            <view>漂流行程约3个小时。</view>
 
             <view class="ul">
               <view class="highlight">漂流注意事项</view>
-              <view class="ul-list">漂流行程约2个小时</view>
               <view class="ul-list">水流较湍急，会全身湿透，建议穿涉水鞋和泳衣</view>
+              <view class="ul-list">贵重小件物品（钱包手机）请务必随船带，教练有防水口袋可以放</view>
+              <view class="ul-list">背包和衣服等，放车上直接从起点带到终点</view>
+              <view class="ul-list">漂流过程中的照片可以到相应柜台付费购买</view>
               <view class="ul-list">漂流完之后需要给教练小费</view>
             </view>
           </view>
@@ -506,7 +509,7 @@
           </view>
 
           <view class="list">
-            <view class="title">8:00 出发前往潜水点</view>
+            <view class="title">8:00 酒店大堂集合，前往潜水点</view>
             <view>潜点位于巴厘岛北部的Tulanben，车程约2个小时。</view>
           </view>
 
