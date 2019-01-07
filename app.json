@@ -6,6 +6,7 @@
     "pages/gallery/gallery",
     "pages/help/help"
   ],
+  "cloud": true,
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#262626",
