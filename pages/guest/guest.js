@@ -1,6 +1,5 @@
 // pages/guest/guest.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -32,6 +31,13 @@ Page({
     }]
   },
 
+  statechange(e) {
+    console.log('live-player code:', e.detail.code)
+  },
+  error(e) {
+    console.error('live-player error:', e.detail.errMsg)
+  },
+
   clickImage: function (e) {
     wx.previewImage({
       urls: [e.currentTarget.dataset.variable] // 需要预览的图片http链接列表
@@ -43,7 +49,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: 'Thanks for Attending',
+      title: 'Thanks for Your Witness',
       imageUrl: 'https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/transpond.jpg'
     }
   }

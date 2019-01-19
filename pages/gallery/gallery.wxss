@@ -1,4 +1,8 @@
 /* pages/gallery/gallery.wxss */
+page {
+  background-color: #e8e8e8;
+}
+
 .section {
   padding: 16px 30rpx 0px;
 }

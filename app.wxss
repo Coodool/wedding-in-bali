@@ -2,7 +2,7 @@
 
 /**app.wxss**/
 page {
-  background-color: #e8e8e8;
+  /* background-color: #e8e8e8; */
   font-size: 14px;
   height: 100%;
   text-align: justify;

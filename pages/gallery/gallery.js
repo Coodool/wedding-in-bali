@@ -164,7 +164,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: 'Thanks for Attending',
+      title: 'Thanks for Your Witness',
       imageUrl: 'https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/transpond.jpg'
     }
   }

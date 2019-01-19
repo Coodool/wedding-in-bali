@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/loading/loading",
     "pages/journey/journey",
     "pages/guest/guest",
     "pages/gallery/gallery",
-    "pages/help/help"
+    "pages/help/help",
+    "pages/map/map"
   ],
   "cloud": true,
   "window": {
@@ -12,37 +14,5 @@
     "navigationBarBackgroundColor": "#262626",
     "navigationBarTitleText": "巴厘岛婚礼",
     "navigationBarTextStyle": "white"
-  },
-  "tabBar": {
-    "color": "#595959",
-    "selectedColor": "#262626",
-    "borderStyle": "black",
-    "backgroundColor": "#f5f5f5",
-    "list": [
-      {
-        "pagePath": "pages/journey/journey",
-        "text": "旅程",
-        "iconPath": "images/gray-journey.png",
-        "selectedIconPath": "images/selected-journey.png"
-      },
-      {
-        "pagePath": "pages/guest/guest",
-        "text": "嘉宾",
-        "iconPath": "images/gray-guest.png",
-        "selectedIconPath": "images/selected-guest.png"
-      },
-      {
-        "pagePath": "pages/gallery/gallery",
-        "text": "婚纱",
-        "iconPath": "images/gray-gallery.png",
-        "selectedIconPath": "images/selected-gallery.png"
-      },
-      {
-        "pagePath": "pages/help/help",
-        "text": "帮助",
-        "iconPath": "images/gray-help.png",
-        "selectedIconPath": "images/selected-help.png"
-      }
-    ]
   }
 }

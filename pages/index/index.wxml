@@ -1,9 +1,18 @@
-<!--pages/guest/guest.wxml-->
-<view class="container" bindtap="clickBG">
-  <view wx:if="{{!hasUserInfo}}">
-    <view class="btn-wrapper">
-      <button class="btn" open-type="getUserInfo"
-  bindgetuserinfo="bindGetUserInfo">点击进入</button>
+<!--pages/index/index.wxml-->
+<view class="index-page">
+  <view class="live-container">
+    <live-player
+      src="rtmp://live.yearito.cn/live/wedding"
+      mode="RTC"
+      bindstatechange="statechange"
+      binderror="error"
+      />
+  </view>
+
+  <view class="panel-container">
+    <view class="panel" wx:for="{{panel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}">
+      <view><image class="panel-image" mode="aspectFit" src="{{item.icon}}" /></view>
+      <view>{{item.text}}</view>
     </view>
   </view>
 </view>
