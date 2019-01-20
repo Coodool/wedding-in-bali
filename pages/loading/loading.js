@@ -39,6 +39,8 @@ Page({
     });
   },
 
+
+  //登陆后的逻辑，在LeanCloud和云开发后台分别记录用户登陆信息
   login: function(userInfo){
     const user = AV.User.current();
     // 更新当前用户的信息
@@ -46,6 +48,15 @@ Page({
       // 成功，此时可在控制台中看到更新后的用户信息
       App.globalData.user = user.toJSON();
     }).catch(console.error);
+
+    //登陆日志
+    var LoginLog = AV.Object.extend('LoginLog');
+    var log = new LoginLog();
+    log.set(userInfo);
+    log.save().then(function() {
+      console.log("登陆日志写入成功！")
+    }, function(error) {
+    });
 
     //云开发记录用户
     wx.cloud.init({
