@@ -1,0 +1,13 @@
+<!--map.wxml-->
+<map
+  id="map"
+  scale="11"
+  markers="{{markers}}"
+  show-location
+>
+  <cover-view class="btn-wrapper">
+    <button class="{{index == '1' ? 'active':''}}" bindtap="onSelect" data-index="1">美食</button>
+    <button class="{{index == '2' ? 'active':''}}" bindtap="onSelect" data-index="2">住宿</button>
+    <button class="{{index == '3' ? 'active':''}}" bindtap="onSelect" data-index="3">景点</button>
+  </cover-view>
+</map>

@@ -1,0 +1,21 @@
+/* map.wxss */
+map {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-wrapper {
+  padding: 20px 100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  font-size: 14px;
+  width: 120rpx;
+  border: 1px solid #bfbfbf;
+}
+
+button.active {
+  border-color: #1890ff;
+}
