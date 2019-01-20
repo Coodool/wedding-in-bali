@@ -1,5 +1,7 @@
 // pages/index/index.js
-const app = getApp();
+const App = getApp();
+const AV = App.AV;
+const LiveQuery = App.LiveQuery;
 
 Page({
 
@@ -12,25 +14,43 @@ Page({
   },
 
   clickBG: function (e) {
-    if( this.data.hasUserInfo ){
+    if( App.globalData.user ){
       this.enter();
     }
   },
 
-  bindGetUserInfo: function (e) {
-    if( e.detail.userInfo ){
-      //记录用户登陆日志
-      wx.cloud.init({
-        traceUser: true
-      })
-    }
-    this.enter();
+  onAuth: function () {
+    wx.getUserInfo({
+      success: ({userInfo}) => {
+        this.login(userInfo);
+
+        this.setData({
+          hasUserInfo: true
+        })
+
+        this.enter();
+      }
+    })
   },
 
   enter: function() {
     wx.navigateTo({
       url: '/pages/index/index'
     });
+  },
+
+  login: function(userInfo){
+    const user = AV.User.current();
+    // 更新当前用户的信息
+    user.set(userInfo).save().then(user => {
+      // 成功，此时可在控制台中看到更新后的用户信息
+      App.globalData.user = user.toJSON();
+    }).catch(console.error);
+
+    //云开发记录用户
+    wx.cloud.init({
+      traceUser: true
+    })
   },
 
   /**
@@ -45,28 +65,50 @@ Page({
       }
     }, 50)
 
-    wx.getUserInfo({
-      success: res => {
-        wx.cloud.init({
-          traceUser: true
-        })
+    AV.User.loginWithWeapp().then(user => {
+      // 调用小程序 API，得到用户信息
+      wx.getUserInfo({
+        success: ({userInfo}) => {
+          this.login(userInfo);
 
-        this.setData({
-          hasUserInfo: true
-        })
+          //倒计时2s后进入应用
+          this.enterAppTimer = setTimeout(function(){
+            wx.navigateTo({
+              url: '/pages/index/index'
+            });
+          }, 2000);
+        },
+        fail: ()=>{
+          //显示点击进入按钮
+          this.setData({
+            hasUserInfo: false
+          })
+        }
+      });
+    }).catch(console.error);
 
-        this.enterAppTimer = setTimeout(function(){
-          wx.navigateTo({
-            url: '/pages/index/index'
-          });
-        }, 2000);
-      },
-      fail: res => {
-        this.setData({
-          hasUserInfo: false
-        })
-      }
-    })
+    // wx.getUserInfo({
+    //   success: res => {
+    //     wx.cloud.init({
+    //       traceUser: true
+    //     })
+    //
+    //     this.setData({
+    //       hasUserInfo: true
+    //     })
+    //
+    //     this.enterAppTimer = setTimeout(function(){
+    //       wx.navigateTo({
+    //         url: '/pages/index/index'
+    //       });
+    //     }, 2000);
+    //   },
+    //   fail: res => {
+    //     this.setData({
+    //       hasUserInfo: false
+    //     })
+    //   }
+    // })
   },
 
   /**

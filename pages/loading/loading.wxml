@@ -3,7 +3,7 @@
   <view wx:if="{{!hasUserInfo}}">
     <view class="btn-wrapper">
       <button class="btn" open-type="getUserInfo"
-  bindgetuserinfo="bindGetUserInfo">点击进入</button>
+  bindgetuserinfo="onAuth">授权登陆</button>
     </view>
   </view>
 </view>

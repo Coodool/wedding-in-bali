@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/loading/loading",
-    "pages/journey/journey",
+    "pages/index/index",
     "pages/map/map",
+    "pages/journey/journey",
     "pages/guest/guest",
     "pages/gallery/gallery",
     "pages/help/help"
