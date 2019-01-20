@@ -79,3 +79,9 @@ page {
   padding: 36px 0px;
   background-color: #fff;
 }
+
+.flight-map {
+  margin-top: 12px;
+  height: 400px;
+  width: 100%;
+}

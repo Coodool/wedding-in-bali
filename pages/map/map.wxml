@@ -1,7 +1,6 @@
 <!--map.wxml-->
 <map
   id="map"
-  scale="11"
   markers="{{markers}}"
   show-location
 >

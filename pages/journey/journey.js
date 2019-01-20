@@ -2,6 +2,45 @@ var util = require('../../utils/util.js');
 
 Page({
   data: {
+    airport:[
+      {
+        latitude: 22.30041,
+        longitude: 113.93071,
+        title:"香港机场",
+        iconPath: "/images/airport.png",
+        width: 30,
+        height: 30,
+      }, {
+        latitude: 14.52065,
+        longitude: 121.01395,
+        title:"马尼拉机场",
+        iconPath: "/images/airport.png",
+        width: 30,
+        height: 30,
+      }, {
+        latitude: -8.74237,
+        longitude: 115.16759,
+        title:"菲律宾机场",
+        iconPath: "/images/airport.png",
+        width: 30,
+        height: 30,
+      }
+    ],
+    polyline: [{
+      points: [{
+        latitude: 22.30041,
+        longitude: 113.93071,
+      }, {
+        latitude: 14.52065,
+        longitude: 121.01395,
+      }, {
+        latitude: -8.74237,
+        longitude: 115.16759,
+      }],
+      width: 2,
+      dottedLine: true,
+      arrowLine: true,
+    }],
     date: ["2月3日", "2月4日", "2月5日", "2月6日", "2月7日", "2月8日", "2月9日", "2月10日"],
     current: util.judgeDay(),
     bambooCorner: [
