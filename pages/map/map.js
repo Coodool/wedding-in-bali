@@ -42,6 +42,7 @@ Page({
   data: {
     markers: [],
     index: 0,
+    scale: 11,
   },
 
   /**
@@ -63,6 +64,18 @@ Page({
 
     this.setData({
       markers
+    })
+  },
+
+  onLocate: function () {
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: (res) => {
+        this.setData({
+          location: res,
+          scale: 13
+        })
+      }
     })
   },
 

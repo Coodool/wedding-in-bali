@@ -19,3 +19,11 @@ button {
 button.active {
   border-color: #1890ff;
 }
+
+.target {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  width: 24px;
+  height: 24px;
+}

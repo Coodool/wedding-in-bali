@@ -8,6 +8,11 @@
     "pages/gallery/gallery",
     "pages/help/help"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于地图中的定位"
+    }
+  },
   "cloud": true,
   "window": {
     "backgroundTextStyle": "dark",

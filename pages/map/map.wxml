@@ -1,6 +1,9 @@
 <!--map.wxml-->
 <map
   id="map"
+  longitude="{{location.longitude}}"
+  latitude="{{location.latitude}}"
+  scale="{{scale}}"
   markers="{{markers}}"
   show-location
 >
@@ -9,4 +12,6 @@
     <button class="{{index == '2' ? 'active':''}}" bindtap="onSelect" data-index="2">住宿</button>
     <button class="{{index == '3' ? 'active':''}}" bindtap="onSelect" data-index="3">景点</button>
   </cover-view>
+
+  <cover-image class="target" bindtap="onLocate" src="/images/target.png" />
 </map>
