@@ -16,7 +16,6 @@ page {
   height: 36px;
   bottom: 0px;
   background-color: rgba(0,0,0,0.5);
-  transition: all .5s ease-in-out;
   box-sizing: border-box;
 
   color: #e6e6e6;

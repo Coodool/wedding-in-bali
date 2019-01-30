@@ -100,6 +100,7 @@ Page({
 
   //重新获取数据流
   restartLive(){
+    this.resetAutoHideTimer();
     this.livePlayerContext.play({
       success: (e) => {
         this.setData({
