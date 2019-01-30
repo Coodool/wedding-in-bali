@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/loading/loading",
     "pages/live/live",
-    "pages/index/index",
     "pages/map/map",
     "pages/journey/journey",
     "pages/guest/guest",

@@ -98,6 +98,21 @@ Page({
     }
   },
 
+  //重新获取数据流
+  restartLive(){
+    this.livePlayerContext.play({
+      success: (e) => {
+        this.setData({
+          playing: true
+        })
+      },
+      fail(e){
+        console.log("replay live video failed!")
+        console.log(e)
+      }
+    });
+  },
+
   //切换播放状态
   togglePlaying() {
     this.resetAutoHideTimer();
@@ -157,6 +172,8 @@ Page({
       console.log(error)
       // 异常处理
     });
+
+    this.updateMsgExt(App.globalData.msgEx);
 
     // 8s后隐藏视频下方工具栏
     this.initialTimer = setTimeout(()=>{
@@ -224,7 +241,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.updateMsgExt(App.globalData.msgEx);
   },
 
   /**
@@ -260,6 +277,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: 'Thanks for Your Witness',
+      imageUrl: 'https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/transpond.jpg'
+    }
   }
 })

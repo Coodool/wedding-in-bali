@@ -17,6 +17,7 @@
   <cover-view class="tool {{toolVisible ? '' : 'hide'}}" >
     <cover-view class="left-section">
       <cover-image class="icon" src="/images/live/{{ playing ? 'pause' : 'play'}}.png" catchtap="togglePlaying" />
+      <cover-image class="icon" src="/images/live/refresh.png" catchtap="restartLive" />
     </cover-view>
     <cover-view class="right-section">
       <!-- <cover-view class="switch-line" wx:for="{{liveStream}}" wx:key="unique">{{item.name}}</cover-view> -->

@@ -1,7 +1,7 @@
 <!--pages/index/index.wxml-->
 <view class="index-page">
-  <image class="img" mode="aspectFill" src="http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery">
-    <cover-image class="play" src="/images/live/o-play.png" bindtap="clickPlay"/>
+  <image class="img" mode="aspectFill" src="http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery" bindtap="clickPlay">
+    <cover-image class="play" src="/images/live/o-play.png" />
   </image>
 
   <view class="panel-container">
