@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/loading/loading",
+    "pages/live/live",
     "pages/index/index",
     "pages/map/map",
     "pages/journey/journey",
@@ -19,5 +20,6 @@
     "navigationBarBackgroundColor": "#262626",
     "navigationBarTitleText": "巴厘岛婚礼",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "navigateToMiniProgramAppIdList": ["wx28fe04e3082fa934"]
 }

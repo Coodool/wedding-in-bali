@@ -1,17 +1,19 @@
 <!--pages/index/index.wxml-->
 <view class="index-page">
-  <view class="live-container">
-    <live-player
-      src="rtmp://live.yearito.cn/live/wedding"
-      mode="RTC"
-      bindstatechange="statechange"
-      binderror="error"
-      />
+  <image class="img" mode="aspectFill" src="http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery">
+    <cover-image class="play" src="/images/live/o-play.png" bindtap="clickPlay"/>
+  </image>
+
+  <view class="panel-container">
+    <view class="panel main-panel" wx:for="{{mainPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}">
+      <i class="iconfont icon-{{item.icon}}"></i>
+      <view>{{item.text}}</view>
+    </view>
   </view>
 
   <view class="panel-container">
-    <view class="panel" wx:for="{{panel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}">
-      <view><image class="panel-image" mode="aspectFit" src="{{item.icon}}" /></view>
+    <view class="panel travel-panel" wx:for="{{travelPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
+      <i class="iconfont icon-{{item.icon}}"></i>
       <view>{{item.text}}</view>
     </view>
   </view>

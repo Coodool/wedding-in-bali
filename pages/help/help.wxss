@@ -28,10 +28,10 @@ page {
   margin: 0px 30rpx;
 }
 
-image {
-  height: 32px;
-  width: 32px;
+.iconfont {
+  font-size: 32px;
   float: right;
+  color: #73d13d;
 }
 
 .title {

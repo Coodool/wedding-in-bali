@@ -13,5 +13,5 @@
     <button class="{{index == '3' ? 'active':''}}" bindtap="onSelect" data-index="3">景点</button>
   </cover-view>
 
-  <cover-image class="target" bindtap="onLocate" src="/images/target.png" />
+  <cover-image class="target" bindtap="onLocate" src="/images/map/target.png" />
 </map>

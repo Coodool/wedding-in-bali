@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 964156 */
+  src: url('//at.alicdn.com/t/font_964156_msdwcfq1wdr.eot');
+  src: url('//at.alicdn.com/t/font_964156_msdwcfq1wdr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_964156_msdwcfq1wdr.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_964156_msdwcfq1wdr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_964156_msdwcfq1wdr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_964156_msdwcfq1wdr.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ring:before {
+  content: "\e601";
+}
+
+.icon-location:before {
+  content: "\e602";
+}
+
+.icon-travel-2:before {
+  content: "\e672";
+}
+
+.icon-help:before {
+  content: "\e609";
+}
+
+.icon-full-screen:before {
+  content: "\e616";
+}
+
+.icon-message:before {
+  content: "\e62f";
+}
+
+.icon-clover:before {
+  content: "\e615";
+}
+
+.icon-camera:before {
+  content: "\e643";
+}
+
+.icon-gallery:before {
+  content: "\e604";
+}
+
+.icon-mute:before {
+  content: "\e752";
+}
+
+.icon-o-pause:before {
+  content: "\e606";
+}
+
+.icon-travel:before {
+  content: "\e603";
+}
+
+.icon-phone:before {
+  content: "\e694";
+}
+
+.icon-playing:before {
+  content: "\e720";
+}
+
+.icon-help-3:before {
+  content: "\e600";
+}
+
+.icon-exchange-rate:before {
+  content: "\e641";
+}
+
+.icon-refresh:before {
+  content: "\e633";
+}
+
+.icon-pause:before {
+  content: "\e6ab";
+}
+
+.icon-photo:before {
+  content: "\e610";
+}
+
+.icon-o-playing:before {
+  content: "\e60b";
+}
+
+.icon-target:before {
+  content: "\e625";
+}
+
+.icon-voice:before {
+  content: "\e91e";
+}
+
+.icon-photo2:before {
+  content: "\e6ce";
+}
+
+.icon-bed:before {
+  content: "\e6e5";
+}
+
+.icon-restaurant:before {
+  content: "\e617";
+}
+
+.icon-o-exchange-rate:before {
+  content: "\e71f";
+}
+
+.icon-help-2:before {
+  content: "\e624";
+}
+
+.icon-guest:before {
+  content: "\e656";
+}
+
+.icon-map:before {
+  content: "\e623";
+}

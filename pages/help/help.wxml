@@ -8,7 +8,7 @@
             <view class="title">{{item.title}}</view>
             <view class="detail">{{item.text}}</view>
           </view>
-          <image src="/images/call.png"/>
+          <i class="iconfont icon-phone"></i>
         </view>
         <block wx:if="{{index != list.length-1}}">
           <view class="divider"></view>

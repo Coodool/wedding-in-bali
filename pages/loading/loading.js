@@ -1,7 +1,6 @@
 // pages/index/index.js
 const App = getApp();
-const AV = App.AV;
-const LiveQuery = App.LiveQuery;
+const AV = require('../../libs/av-weapp-min.js');
 
 Page({
 

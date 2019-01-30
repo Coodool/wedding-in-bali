@@ -1,49 +1,37 @@
 // pages/index/index.js
-const app = getApp();
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    panel: [
-      {
-        text: "旅程",
-        icon: "/images/journey.png",
-        nav: "/pages/journey/journey"
-      },
-      {
-        text: "嘉宾",
-        icon: "/images/guest.png",
-        nav: "/pages/guest/guest"
-      },
-      {
-        text: "婚纱",
-        icon: "/images/gallery.png",
-        nav: "/pages/gallery/gallery"
-      },
-      {
-        text: "地图",
-        icon: "/images/map.png",
-        nav: "/pages/map/map"
-      },
-      {
-        text: "祝福",
-        icon: "/images/blessing.png",
-        nav: "/pages/blessing/blessing"
-      },
-      {
-        text: "求助",
-        icon: "/images/help.png",
-        nav: "/pages/help/help"
-      }
+    mainPanel: [
+      { text: "嘉宾", icon: "guest", nav: "/pages/guest/guest"},
+      { text: "婚纱", icon: "gallery", nav: "/pages/gallery/gallery"},
+    ],
+    travelPanel: [
+      { text: "旅程", icon: "travel-2", nav: "/pages/journey/journey"},
+      { text: "地图", icon: "map", nav: "/pages/map/map"},
+      { text: "汇率", icon: "exchange-rate", appid: "wx28fe04e3082fa934"},
+      { text: "求助", icon: "help-3", nav: "/pages/help/help"}
     ]
   },
 
   clickPanel: function (event) {
+    if( event.currentTarget.dataset.url ){
+      wx.navigateTo({
+        url: event.currentTarget.dataset.url
+      });
+    } else {
+      wx.navigateToMiniProgram({
+        appId: event.currentTarget.dataset.appid
+      })
+    }
+  },
+
+  clickPlay: function (event) {
     wx.navigateTo({
-      url: event.currentTarget.dataset.url
+      url: "/pages/live/live"
     });
   },
 
@@ -51,6 +39,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
   },
 
   /**

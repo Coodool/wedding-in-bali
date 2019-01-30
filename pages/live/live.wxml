@@ -1,0 +1,74 @@
+<!--live/live.wxml-->
+<live-player
+  id="live"
+  class="live-player"
+  src="{{liveStream[index].pull}}"
+  mode="live"
+  muted="{{muted}}"
+  autoplay
+  object-fit="fillCrop"
+  bindstatechange="statechange"
+  binderror="error"
+  bindtap="onTapScreen"
+>
+  <cover-view class="log-info">
+    <cover-view class="info" wx:for="{{log}}" wx:key="unique">{{item}}</cover-view>
+  </cover-view>
+  <cover-view class="tool {{toolVisible ? '' : 'hide'}}" >
+    <cover-view class="left-section">
+      <cover-image class="icon" src="/images/live/{{ playing ? 'pause' : 'play'}}.png" catchtap="togglePlaying" />
+    </cover-view>
+    <cover-view class="right-section">
+      <!-- <cover-view class="switch-line" wx:for="{{liveStream}}" wx:key="unique">{{item.name}}</cover-view> -->
+      <cover-image class="icon" src="/images/live/{{ muted ? 'mute' : 'voice'}}.png" catchtap="toggleVoice" />
+      <cover-image class="icon" src="/images/live/fullScreen.png" catchtap="toggleFullScreen" />
+    </cover-view>
+  </cover-view>
+</live-player>
+
+<!-- 根据用户Tag返回标签背景色 -->
+<wxs module="tag">
+  var chooseColor = function( tag ) {
+    if( tag == "最帅的新郎" || tag == "最美的新娘" ){
+      return "#ff4d4f";
+    } else if ( tag == "现场嘉宾" ) {
+      return "#ffc53d";
+    } else {
+      return "#bfbfbf";
+    }
+  }
+  module.exports.chooseColor = chooseColor;
+</wxs>
+
+<scroll-view
+  class="chatroom"
+  scroll-y="true"
+  scroll-top="{{scrollTop}}"
+>
+  <view class="tips" wx:if="{{msgEx.length == 0}}"><text>聊天室加载中...</text></view>
+  <view id="chatList" style="visibility: {{scrollTop == 0 ? 'hidden': 'visible'}}">
+    <view class="msg" wx:for="{{msgEx}}" wx:key="unique">
+      <image class="avatar" src="{{item.avatarUrl}}"/>
+      <view class="content">
+        <view class="name-wrapper">
+          <text class="name">{{item.nickName}}</text>
+          <text class="tag" wx:if="{{item.tag}}" style="background-color: {{tag.chooseColor(item.tag)}}">{{item.tag}}</text>
+        </view>
+        <text class="text" selectable="true">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<view class="bottom">
+  <view class="input-wrapper">
+    <input
+      class="input"
+      bindinput="onInputChange"
+      type="text"
+      value='{{inputContent}}'
+    />
+    <text class="send" bindtap="onSendMessage" >发送</text>
+  </view>
+</view>

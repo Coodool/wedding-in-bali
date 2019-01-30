@@ -55,10 +55,10 @@ Page({
       height: 30,
     }
 
-    Hotel.forEach( item => Object.assign(item, attr, { iconPath: "/images/hotel.png"} ));
-    Restaurant.forEach( item => Object.assign(item, attr, { iconPath: "/images/restaurant.png"} ));
-    ScenicSpot.forEach( item => Object.assign(item, attr, { iconPath: "/images/scene.png"} ));
-    WeddingChapel.forEach( item => Object.assign(item, attr, { iconPath: "/images/wedding.png"} ));
+    Hotel.forEach( item => Object.assign(item, attr, { iconPath: "/images/map/hotel.png"} ));
+    Restaurant.forEach( item => Object.assign(item, attr, { iconPath: "/images/map/restaurant.png"} ));
+    ScenicSpot.forEach( item => Object.assign(item, attr, { iconPath: "/images/map/scene.png"} ));
+    WeddingChapel.forEach( item => Object.assign(item, attr, { iconPath: "/images/map/wedding.png"} ));
 
     let markers = WeddingChapel.concat(Hotel, Restaurant, ScenicSpot );
 

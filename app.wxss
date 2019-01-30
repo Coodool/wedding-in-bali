@@ -1,4 +1,5 @@
-@import 'weui.wxss';
+/* @import 'weui.wxss'; */
+@import 'libs/style/iconfont.wxss';
 
 /**app.wxss**/
 page {
