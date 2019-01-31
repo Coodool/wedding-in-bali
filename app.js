@@ -65,10 +65,14 @@ App({
         console.log("当前直播间共有：" + membersCount + "人");
       }).catch(console.error);
 
-      //获取最近30条聊天记录
-      return chatRoom.queryMessages({
-        limit: 30, // limit 取值范围 1~1000，默认 20
-      })
+      this.getChatMessages();
+    })
+  },
+
+  //获取直播间聊天记录
+  getChatMessages(){
+    this.chatRoom.queryMessages({
+      limit: 30, // limit 取值范围 1~1000，默认 20
     })
     .then( messages => {
       console.log("获取聊天记录成功");

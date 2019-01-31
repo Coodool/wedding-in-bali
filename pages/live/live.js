@@ -236,6 +236,11 @@ Page({
    */
   onReady: function () {
     this.livePlayerContext = wx.createLivePlayerContext("live");
+    this.updateMsgTimer = setTimeout(()=>{
+      if( this.data.msgEx.length == 0 ){
+        App.getChatMessages();
+      }
+    }, 2000)
   },
 
   /**
@@ -258,6 +263,7 @@ Page({
   onUnload: function () {
     clearTimeout(this.initialTimer);
     clearTimeout(this.autoHideTimer);
+    clearTimeout(this.updateMsgTimer);
   },
 
   /**
