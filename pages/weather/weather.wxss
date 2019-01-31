@@ -1,0 +1,66 @@
+/* pages/weather/weather.wxss */
+
+/* 睛蓝 */
+page {
+  background-color: #5698c3;
+}
+
+.container {
+  padding-bottom: 24px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 80rpx 50rpx;
+  line-height: 2em;
+}
+
+.center view {
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.current {
+  flex-grow: 1;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 16px;
+}
+
+.current .weather-icon {
+  margin: 0 auto 16px;
+  width: 80px;
+  height: 80px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast {
+  margin-top: 16px;
+  display: flex;
+  flex-grow: 1;
+  height: 200px;
+  font-size: 12px;
+}
+
+.one-day {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.one-day .weather-icon {
+  width: 36px;
+  height: 36px;
+}

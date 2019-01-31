@@ -34,6 +34,8 @@
       return "#ff4d4f";
     } else if ( tag == "现场嘉宾" ) {
       return "#ffc53d";
+    } else if ( tag == "房管" ) {
+      return "#1890ff";
     } else {
       return "#bfbfbf";
     }

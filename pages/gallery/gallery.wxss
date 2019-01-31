@@ -1,6 +1,8 @@
 /* pages/gallery/gallery.wxss */
+
+/* red-4 */
 page {
-  background-color: #ffc53d;
+  background-color: #ff7875;
 }
 
 .container {
@@ -8,11 +10,9 @@ page {
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px #8c8c8c;
   overflow: hidden;
   margin-bottom: 24px;
+  padding: 0px;
 }
 
 .image-wrapper {

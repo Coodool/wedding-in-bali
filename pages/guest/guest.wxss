@@ -1,6 +1,8 @@
 /* pages/guest/guest.wxss */
+
+/* gold-5 */
 page {
-  background-color: #1890ff;
+  background-color: #ffc53d;
 }
 
 .container {

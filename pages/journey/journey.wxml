@@ -24,12 +24,12 @@
     <swiper-item>
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
-          <view class="list">
+          <view class="card">
             <view class="title">12:00 深圳集合，吃午餐</view>
             <view>建议提前一天到深圳暂住。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">13:00 出发前往香港</view>
             <view class="paragraph">
               <view>请提前准备好以下物品，过关需查验：</view>
@@ -49,7 +49,7 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">16:00 到达机场，办理离境登机手续</view>
             <view>国际航班需要提前三个小时值机。没有购买飞机餐，候机时先吃个晚饭，机场餐食较贵，请自备晚餐。</view>
             <view class="ul">
@@ -70,7 +70,7 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">19:35 航班起飞</view>
             <view>航班号 5J119，飞行时间约2.5个小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
 
@@ -84,12 +84,12 @@
             </map>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">21:55 到达马尼拉机场，转机</view>
             <view>下飞机后凭联程机票走国际转机通道，无需入境。如果行李直挂则不用重新托运行李，否则需要取行李并重新托运。到达和出发都在 T3 航站楼，等候时间约5小时。菲律宾的机场都比较冷，需要准备一件外套。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">3:50<view class="sub">+1</view> 第二程航班起飞</view>
             <view>航班号 5J279，飞行时间约4小时。飞机上空姐将会发放印尼入境卡和海关申报表。根据目前政策不需要填写印尼入境卡。如未携带高额货币或违禁品则无须填写海关申报表。</view>
           </view>
@@ -101,7 +101,7 @@
     <swiper-item>
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
-          <view class="list">
+          <view class="card">
             <view class="title">7:50 到达目的地，办理入境</view>
             <view>航班将降落在巴厘岛登巴萨机场。</view>
             <view class="ul">
@@ -122,22 +122,22 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">9:00 前往家乐福购物，吃早餐</view>
             <view>Carrefour Shopping Mall 采购零食酒水饮料等。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">11:00 库塔沙滩</view>
             <view>在库塔沙滩休闲，注意防晒。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">12:30 回到机场</view>
             <view>叶林的航班 MI5832 和李颖的航班 D7799 分别于11:50和12:15到，我们将返回机场接上他们一起行动。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">13:30 海鲜午餐</view>
             <view>Bamboo Corner 是库塔区小巷内一家口碑很好的海鲜餐馆，非常实惠，除海鲜外，还提供西餐及中国粤菜。</view>
 
@@ -177,7 +177,7 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">14:30 出发前往酒店</view>
             <view>今晚将住在位于 Tabanan 的 Amarta Beach Retreat，车程约1.5小时。Amarta 是一处私密的滨海别墅度假村，因为位置实在太过偏僻，所以附近没有任何的餐馆和杂货店。酒店共有十间别墅，我们预定了其中的七栋，基本承包了整个度假村。</view>
 
@@ -205,7 +205,7 @@
             </swiper>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">18:00 吃年夜饭</view>
             <view>晚上将在酒店内部餐厅用餐，饭前可以欣赏一下海边日落，饭后自行组织牌局或桌游，欢度除夕。</view>
           </view>
@@ -217,17 +217,17 @@
     <swiper-item>
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
-            <view class="list">
+            <view class="card">
               <view class="title">8:00 起床，吃早餐</view>
               <view>今日将更换住宿酒店，需要收拾所有个人行李并退房。</view>
             </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">10:00 离开酒店</view>
             <view>前往巴厘岛南部的 Uluwatu 参加婚礼，路程约2~3小时。新郎和新娘将会提前乘坐另外一辆车先到达场地化妆彩排，其他人请跟随叶林去吃午餐及去酒店check-in。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">11:00 印尼午餐</view>
             <view>午餐将安排在 Seminyak 的 Naughty Nuri’s Seminyak，这家店在水明漾美食中排名第一，提供地道的美式烹饪，招牌菜是烤猪肋排，口碑非常好。</view>
 
@@ -279,7 +279,7 @@
 
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">12:30 出发前往酒店</view>
             <view>今晚将住在 Uluwatu 的 Le Grande Bali，这个酒店建立在高尔夫球场旁边，设施比较完善，到达酒店 check-in 后可以稍作休息。</view>
 
@@ -304,7 +304,7 @@
             </swiper>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">14:00 前往婚礼场地</view>
             <view>婚礼将在 Uluwatu 南部悬崖边的 Ocean Wedding Chapel 举行。</view>
 
@@ -315,7 +315,7 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">15:00 婚礼仪式</view>
             <view class="ul wedding">
               <view class="highlight">仪式流程</view>
@@ -329,17 +329,17 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">15:30 仪式结束</view>
             <view>嘉宾可在场地内自由拍摄合影。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">16:30 返回酒店</view>
             <view>到达酒店后可稍作休息，等日落后开始晚宴。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">18:30 婚礼晚宴</view>
             <view>晚宴将在 Le Grande 酒店内举行。</view>
           </view>
@@ -351,17 +351,17 @@
     <swiper-item>
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
-          <view class="list">
+          <view class="card">
             <view class="title">7:00 起床，吃早餐</view>
             <view>今日将更换住宿酒店，请在吃完早餐后收拾所有个人行李并退房。漂流项目是含酒店接送的，退房后在大厅等待接车，出发前请随身携带两套干净衣服、涉水鞋以及防水背包。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">7:30 酒店大堂集合，前往漂流点</view>
             <view>漂流点位于巴厘岛东部的 Telega Waja River，靠近阿贡火山，车程约2个小时，到达特拉噶河后还需要逆流徒步一段时间才能到达漂流起点。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">10:00 T河漂流</view>
             <view>漂流行程约3个小时。</view>
 
@@ -375,12 +375,12 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">13:00 自助午餐</view>
             <view>漂流结束后洗浴换上干衣服，然后享用自助午餐，饭后将会出发游玩下一个项目。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">14:30 ATV越野骑行</view>
             <view>越野行程约1.5小时。</view>
 
@@ -393,7 +393,7 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">16:00 返回酒店</view>
             <view>今晚将住在 Ubud 的 Pertiwi Bisma 1 的独栋小别墅，车程约1小时。酒店位于山谷旁边，景色十分优美，闲暇时可以好好体验一下酒店的无边泳池，可以在俯瞰整个山谷的景色。酒店还提供前往乌布市场的免费定时班车服务。</view>
 
@@ -419,7 +419,7 @@
             </swiper>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">18:00 印尼料理</view>
             <view>在酒店 check-in 及放置行李后，步行到乌布中心市区的 Fair Warung Bale 吃晚饭。这家店是一家非营利性餐馆，其所有的利润将用于支持贫困社区的健康和医疗项目。比较特别的是，这家参观不用纳税，也不收小费。餐馆位于二楼，如果时间合适是可以看到日落的。</view>
 
@@ -471,7 +471,7 @@
 
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">20:00 印尼特色大保健</view>
             <view>回酒店的路上有很多 SPA 按摩店，价格也比较实惠，值得体验一下当地按摩手法。</view>
 
@@ -495,40 +495,40 @@
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
 
-          <view class="list">
+          <view class="card">
             <view class="title">7:00 起床，吃早餐</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">8:00 酒店大堂集合，前往潜水点</view>
             <view>潜点位于巴厘岛北部的 Tulanben，车程约2个小时。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">10:30 深潜教学</view>
             <view>抵达 Tulanben 后，将在潜水中心填写资料、试穿潜水装备，会有简单教学讲解（有中文翻译），并在泳池内进行基础潜水技巧教学训练。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">11:00 一潜</view>
             <view>潜点为二战时期自由号沉船，时间约30分钟。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">12:00 午餐</view>
             <view>午餐将由潜水中心提供。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">13:30 二潜</view>
             <view>潜点为珊瑚花园，时间约30分钟。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">14:30 返回酒店</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">18:00 亚洲素食</view>
             <view>Herb Library 是一家素食餐馆，开了这么多天的荤，今天换点清淡的口味尝尝。</view>
 
@@ -561,12 +561,12 @@
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
 
-          <view class="list">
+          <view class="card">
             <view class="title">8:00 起床，吃早餐</view>
             <view>今日将更换住宿酒店，需要收拾所有个人行李并退房。请换上涉水鞋，并准备一套干衣服，今日行程中可能会涉水。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">10:00 游玩乌布皇宫和乌布市场</view>
             <view class="paragraph">乌布皇宫（Ubud Palace）是乌布地区最著名的地标，始建于16世纪。因为仍有皇族居住，所以皇宫内有部分区域是不对外开放的。每晚7点开始有专业的巴厘传统舞蹈表演，门票IDR 80k/人。</view>
 
@@ -575,7 +575,7 @@
             <view class="paragraph">乌布市场（Ubud Market）就在乌布皇宫的对面，售卖印尼特色衣服饰品和工艺品，逛逛就行了，如果要买的话一定要讲价，对折砍起，三折成交。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">11:30 印尼料理</view>
             <view>Balinese Home Cooking 是一家口碑很好的农家乐，远离闹市，环境优雅，价格实惠，适合团体用餐。</view>
 
@@ -611,7 +611,7 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">12:30 梯田/圣泉寺/峡谷瀑布</view>
 
             <view class="paragraph">
@@ -639,12 +639,12 @@
             <image mode="aspectFill" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterfall.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterfall.png!thumbnail" style="width: 100%;"/>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">16:00 木雕村/银器村/蜡染村（可选）</view>
             <view>在从乌布回到库塔区的路上将会依次经过木雕村（Mas Village）、银器村（Celuk Village）、蜡染村（Bali Bidadari Batik），如果有多余的时间就稍作停留。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">17:00 返回酒店</view>
             <view>今晚将入住Kuta市区的Hotel NEO+ Kuta Legian，酒店附近街区夜生活非常丰富。</view>
 
@@ -670,7 +670,7 @@
             </swiper>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">18:00 自助晚餐</view>
             <view>晚上将在巴厘岛大名鼎鼎的空中花园酒吧（Sky Garden）吃晚餐，这家酒吧在17点到21点之间提供自助用餐，价格Rp 115k/人。21点之后开启夜场狂欢，入场价格Rp 250k/人。酒吧共有四层楼，每一层的音乐和氛围都不一样，顶层的气氛最燃最嗨，记得提前抢占好的位置。</view>
 
@@ -708,18 +708,18 @@
     <swiper-item>
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
-          <view class="list">
+          <view class="card">
             <view class="title">9:00 起床，吃早餐</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">10:00 库塔海滩冲浪或水上乐园</view>
             <view >今天没有做详细的行程安排，大家可以根据体力情况自行选择出玩，可以去库塔沙滩（Kuta Beach)冲浪，也可以选择去水上公园（Waterbom Bali）玩，门票价格约220RMB/人。</view>
 
             <image mode="aspectFill" data-variable="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterbom.png!thumbnail" bindtap="clickImage" src="https://wx-1256884783.picgz.myqcloud.com/Journey/Scenic-Spot/waterbom.png!thumbnail" style="width: 100%;margin-top: 12px;"/>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">12:00 印尼料理</view>
             <view>中午将在 Warung Chef Bagus 用餐，这家印尼餐馆是库塔区排名第二的美食。</view>
 
@@ -756,14 +756,14 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">13:00 逛街采购</view>
             <view>下午可以在各大商场采购印尼特产和纪念品，如百货商场（Mal Bali Galeria)、 家乐福（Carrefour Shopping Mall）、DFS免税店。值得采购的商品包括：手工皂、精油、蜡染、银饰、木雕、石雕、POLO衫、化妆品。</view>
             <view class="paragraph">可以采购一些食品以备第二天中午转机时作为午餐。</view>
           </view>
 
 
-          <view class="list">
+          <view class="card">
             <view class="title">18:00 最后的晚餐</view>
             <view>在印尼的最后一顿晚宴将在 Yogi's Paradise and Grill 进行，这是一家又贵又好吃的海鲜餐厅。</view>
 
@@ -800,7 +800,7 @@
           </view>
 
 
-          <view class="list">
+          <view class="card">
             <view class="title">20:00 收拾行李，休息</view>
             <view>由于第二天凌晨要赶飞机，请早点休息。</view>
           </view>
@@ -813,15 +813,15 @@
     <swiper-item>
       <scroll-view class="scroll-container" scroll-y="true">
         <view class="content">
-          <view class="list">
+          <view class="card">
             <view class="title">4:30 起床，吃早餐</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">5:00 出发前往机场</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">5:30 到达机场，办理离境登机手续</view>
             <view class="ul">
               <view class="highlight">巴厘岛出境流程</view>
@@ -845,7 +845,7 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">8:35 航班起飞</view>
             <view>航班号5J280，飞行时间约4小时。飞机上空姐可能会发放菲律宾入境卡和海关申报表，我们只是联程转机，所以无须填表。</view>
 
@@ -859,17 +859,17 @@
             </map>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">12:45 到达马尼拉机场，转机</view>
             <view>下飞机后凭联程机票走国际转机通道，无需入境。如果行李直挂则不用重新托运行李，否则需要取行李并重新托运。到达和出发都在T3航站楼。等候时间约2小时。菲律宾的机场都比较冷，需要准备一件外套。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">15:35 第二程航班起飞</view>
             <view>航班号5J118，飞行时间约2.5小时。飞机上空姐将会发放旅客抵港申报表、旅客离港申报表和海关申报表。根据实际情况填写抵港申报表。如未携带高额货币或违禁品则无须填写海关申报表。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">18:05 抵达香港</view>
             <view class="ul">
               <view class="highlight">香港入境流程</view>
@@ -888,12 +888,12 @@
             </view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">19:00 回到深圳</view>
             <view>过关时提交离港申报表。</view>
           </view>
 
-          <view class="list">
+          <view class="card">
             <view class="title">返回温暖的家</view>
           </view>
 

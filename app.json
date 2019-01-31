@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/loading/loading",
     "pages/index/index",
-    "pages/help/help",
-    "pages/baggage/baggage",
-    "pages/map/map",
+    "pages/weather/weather",
     "pages/journey/journey",
+    "pages/baggage/baggage",
+    "pages/gallery/gallery",
     "pages/live/live",
     "pages/guest/guest",
-    "pages/gallery/gallery"
+    "pages/loading/loading",
+    "pages/help/help",
+    "pages/map/map"
   ],
   "permission": {
     "scope.userLocation": {

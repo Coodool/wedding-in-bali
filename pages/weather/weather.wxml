@@ -1,0 +1,24 @@
+<!--pages/weather/weather.wxml-->
+<view class="container">
+  <view class="card">
+    <view wx:if="{{current}}" class="current">
+      <view class="center">
+        <image class="weather-icon" src="/images/weather/{{current.icon}}.png" mode="aspectFit" />
+        <view class="temp">{{current.temp}}° </view>
+        <view class="describe">{{current.description}}</view>
+      </view>
+      <view class="footer-info">
+        <view class="city-name">城市：{{current.cityName}}</view>
+        <view class="last-update">更新时间：{{current.lastUpdate}}</view>
+      </view>
+    </view>
+
+    <view wx:if="{{forecast}}" class="forecast">
+      <view class="one-day" wx:for="{{forecast}}" wx:key="unique">
+        <view class="date">{{item.date}}</view>
+        <image class="weather-icon" src="/images/weather/{{item.icon}}.png" mode="aspectFit" />
+        <view class="temp">{{item.temp_min}}°/{{item.temp_max}}°</view>
+      </view>
+    </view>
+  </view>
+</view>

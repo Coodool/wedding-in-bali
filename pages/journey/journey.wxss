@@ -1,5 +1,10 @@
+/* cyan-5 */
 page {
   background-color: #36cfc9;
+}
+
+.container {
+  padding: 0px;
 }
 
 .swiper-date {
@@ -23,7 +28,6 @@ page {
   color: #262626;
 }
 
-
 .swiper-content {
   height: 100%;
 }
@@ -37,24 +41,13 @@ page {
   /* padding: 10px 0px; */
 }
 
-.list {
+.card {
   line-height: 1.8em;
   color: #595959;
   padding: 16px 30rpx;
 
   margin: 16px 12px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px #8c8c8c;
 }
-
-.list:not(:last-of-type) {
-  margin-bottom: 10px;
-}
-
-/* .list:not(:last-of-type) {
-  border-bottom: 1rpx solid #bfbfbf;
-} */
 
 .title {
   color: #000;

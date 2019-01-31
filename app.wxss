@@ -9,6 +9,14 @@ page {
   text-align: justify;
 }
 
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px #8c8c8c;
+}
+
 .title + .paragraph {
   margin-top: 4px;
 }
@@ -30,6 +38,7 @@ page {
 }
 
 .container {
+  padding: 12px 16px;
   height: 100%;
   box-sizing: border-box;
 }

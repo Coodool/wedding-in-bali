@@ -13,6 +13,7 @@ Page({
       { text: "旅程", icon: "travel.png", nav: "/pages/journey/journey"},
       { text: "地图", icon: "map.png", nav: "/pages/map/map"},
       { text: "清单", icon: "baggage.png", nav: "/pages/baggage/baggage"},
+      { text: "天气", icon: "weather.png", nav: "/pages/weather/weather"},
       { text: "帮助", icon: "help.png", nav: "/pages/help/help"},
     ],
     appTool: [
