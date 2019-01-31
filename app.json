@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/loading/loading",
+    "pages/map/map",
     "pages/index/index",
     "pages/journey/journey",
     "pages/live/live",
-    "pages/map/map",
     "pages/guest/guest",
     "pages/gallery/gallery",
     "pages/help/help"

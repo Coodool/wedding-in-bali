@@ -5,19 +5,31 @@ map {
 }
 
 .btn-wrapper {
-  padding: 20px 100rpx;
+  padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-button {
-  font-size: 14px;
-  width: 120rpx;
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 12px;
+  border-radius: 50%;
   border: 1px solid #bfbfbf;
 }
 
-button.active {
-  border-color: #1890ff;
+.btn.active {
+  border: 1px solid #1890ff;
 }
 
 .target {

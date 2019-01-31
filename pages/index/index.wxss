@@ -31,7 +31,8 @@ page {
 }
 
 .panel {
-  background-color: #fff1f0;
+  /* background-color: #fff1f0; */
+  background-color: white;
   border-radius: 10rpx;
   margin: 12.5rpx;
   flex-grow: 1;

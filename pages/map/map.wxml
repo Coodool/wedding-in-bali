@@ -8,9 +8,18 @@
   show-location
 >
   <cover-view class="btn-wrapper">
-    <button class="{{index == '1' ? 'active':''}}" bindtap="onSelect" data-index="1">美食</button>
-    <button class="{{index == '2' ? 'active':''}}" bindtap="onSelect" data-index="2">住宿</button>
-    <button class="{{index == '3' ? 'active':''}}" bindtap="onSelect" data-index="3">景点</button>
+    <cover-view class="btn {{index == '1' ? 'active':''}}" bindtap="onSelect" data-index="1">
+      <cover-image class="icon" mode="aspectFit" src="/images/map/restaurant-icon.png" />
+      <cover-view>美食</cover-view>
+    </cover-view>
+    <cover-view class="btn {{index == '2' ? 'active':''}}" bindtap="onSelect" data-index="2">
+      <cover-image class="icon" mode="aspectFit" src="/images/map/hotel-icon.png" />
+      <cover-view>住宿</cover-view>
+    </cover-view>
+    <cover-view class="btn {{index == '3' ? 'active':''}}" bindtap="onSelect" data-index="3">
+      <cover-image class="icon" mode="aspectFit" src="/images/map/scene-icon.png" />
+      <cover-view>景点</cover-view>
+    </cover-view>
   </cover-view>
 
   <cover-image class="target" bindtap="onLocate" src="/images/map/target.png" />
