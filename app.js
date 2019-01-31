@@ -82,7 +82,7 @@ App({
       })
     })
     .then((data) => {
-      // 调用成功，得到成功的应答 data
+      // 调用成功，得到成功的应答
       this.globalData.msgEx = data;
       this.syncMsgToPage();
 
