@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/loading/loading",
     "pages/index/index",
     "pages/weather/weather",
     "pages/journey/journey",
@@ -7,7 +8,6 @@
     "pages/gallery/gallery",
     "pages/live/live",
     "pages/guest/guest",
-    "pages/loading/loading",
     "pages/help/help",
     "pages/map/map"
   ],

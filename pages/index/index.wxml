@@ -1,25 +1,25 @@
 <!--pages/index/index.wxml-->
-<view class="index-page">
-  <image class="img" mode="aspectFill" src="http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery" bindtap="clickPlay">
+<view class="container">
+  <image class="live-entry" mode="aspectFill" src="http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery" bindtap="clickPlay">
     <cover-image class="play" src="/images/live/o-play.png" />
   </image>
 
-  <view class="panel-container">
-    <view class="panel main-panel" wx:for="{{mainPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}">
+  <view class="main">
+    <view class="card main-card" wx:for="{{mainPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}">
       <image class="icon" mode="aspectFit" src="/images/index/{{item.icon}}" />
       <view>{{item.text}}</view>
     </view>
   </view>
 
-  <view class="panel-container">
-    <view class="panel travel-panel" wx:for="{{travelPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
+  <view class="card travel-card">
+    <view class="travel-list" wx:for="{{travelPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
       <image class="icon" mode="aspectFit" src="/images/index/{{item.icon}}" />
       <view>{{item.text}}</view>
     </view>
   </view>
 
-  <view class="panel-container">
-    <view class="panel travel-panel" wx:for="{{appTool}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
+  <view class="tool">
+    <view class="card tool-card" wx:for="{{appTool}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
       <image class="icon" mode="aspectFit" src="/images/index/{{item.icon}}" />
       <view>{{item.text}}</view>
     </view>

@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "巴厘岛婚礼"
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#eea2a4"
 }
