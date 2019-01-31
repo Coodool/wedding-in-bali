@@ -1,41 +1,37 @@
 /* pages/help/help.wxss */
 page {
-  background-color: #e8e8e8;
+  background-color: #ff9c6e;
 }
 
-.wrapper {
-  padding: 30rpx 0px;
-}
-
-.content {
-  background-color: #fff;
+.container {
+  padding: 12px 16px;
 }
 
 .list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 30rpx;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #8c8c8c;
 }
 
 .hover {
   background-color: #bfbfbf;
 }
 
-.divider {
-  height: 0px;
-  border-top: 1rpx solid #e8e8e8;
-  margin: 0px 30rpx;
-}
-
 .iconfont {
   font-size: 32px;
   float: right;
-  color: #73d13d;
+  color: #ff7a45;
 }
 
 .title {
   font-size: 16px;
+  line-height: 2em;
 }
 
 .detail {
