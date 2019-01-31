@@ -9,7 +9,8 @@ Page({
    */
   data: {
     hasUserInfo: true,
-    opacity: 0
+    opacity: 0,
+    animationData: {}
   },
 
   clickBG: function (e) {
@@ -67,13 +68,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.countOpacityTimer = setInterval(()=>{
-      if( this.data.opacity < 100 ){
-        this.setData({
-          opacity: this.data.opacity + 5
-        })
-      }
-    }, 50)
+    //设置邀请函渐显
+    const animation = wx.createAnimation({
+      duration: 2000,
+      timingFunction: 'ease',
+    })
+
+    animation.opacity(0).step()
+
+    this.setData({
+      animationData: animation.export()
+    })
+
+    setTimeout(() => {
+      animation.opacity(1).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }, 100)
 
     AV.User.loginWithWeapp().then(user => {
       // 调用小程序 API，得到用户信息
@@ -82,11 +94,11 @@ Page({
           this.login(userInfo);
 
           //倒计时2s后进入应用
-          this.enterAppTimer = setTimeout(function(){
-            wx.navigateTo({
-              url: '/pages/index/index'
-            });
-          }, 2000);
+          // this.enterAppTimer = setTimeout(function(){
+          //   wx.navigateTo({
+          //     url: '/pages/index/index'
+          //   });
+          // }, 2000);
         },
         fail: ()=>{
           //显示点击进入按钮
@@ -96,29 +108,6 @@ Page({
         }
       });
     }).catch(console.error);
-
-    // wx.getUserInfo({
-    //   success: res => {
-    //     wx.cloud.init({
-    //       traceUser: true
-    //     })
-    //
-    //     this.setData({
-    //       hasUserInfo: true
-    //     })
-    //
-    //     this.enterAppTimer = setTimeout(function(){
-    //       wx.navigateTo({
-    //         url: '/pages/index/index'
-    //       });
-    //     }, 2000);
-    //   },
-    //   fail: res => {
-    //     this.setData({
-    //       hasUserInfo: false
-    //     })
-    //   }
-    // })
   },
 
   /**
@@ -149,7 +138,6 @@ Page({
     if( this.enterAppTimer ){
       clearTimeout(this.enterAppTimer);
     }
-    clearInterval(this.countOpacityTimer);
   },
 
   /**

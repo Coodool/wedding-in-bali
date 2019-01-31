@@ -1,5 +1,5 @@
 <!--pages/guest/guest.wxml-->
-<view class="container" bindtap="clickBG" style="opacity: {{opacity / 100}}">
+<view class="container" bindtap="clickBG" animation="{{animationData}}">
   <view wx:if="{{!hasUserInfo}}">
     <view class="btn-wrapper">
       <button class="btn" open-type="getUserInfo"
