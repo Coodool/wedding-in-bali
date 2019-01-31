@@ -6,7 +6,7 @@ Page({
    */
   data: {
     list: [{
-      date: "2017年8月10日",
+      date: "2017/8/10",
       location: "抚仙湖",
       images: [
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Fuxian-Lake/_DSC6125.jpg!gallery",
@@ -22,7 +22,7 @@ Page({
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Fuxian-Lake/_DSC6340.jpg!gallery",
       ]
     },{
-      date: "2018年3月22日",
+      date: "2018/3/22",
       location: "武汉大学",
       images: [
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/WHU/LE2_8727.JPG!gallery",
@@ -41,7 +41,7 @@ Page({
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/WHU/LE2_9568_2.jpg!gallery",
       ]
     },{
-      date: "2018年3月22日",
+      date: "2018/3/22",
       location: "沙漠",
       images: [
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Desert/LE2_0070_jx.jpg!gallery",
@@ -53,7 +53,7 @@ Page({
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Desert/LE2_9859_jx.jpg!gallery",
       ]
     },{
-      date: "2018年4月23日",
+      date: "2018/4/23",
       location: "森系",
       images: [
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Forest/DOU_0866.jpg!gallery",
@@ -67,7 +67,7 @@ Page({
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Forest/DOU_1118.jpg!gallery",
       ]
     },{
-      date: "2018年4月23日",
+      date: "2018/4/23",
       location: "龙马山",
       images: [
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Mountain/DOU_1244.jpg!gallery",
@@ -76,7 +76,7 @@ Page({
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Mountain/DOU_1175.jpg!gallery",
       ]
     },{
-      date: "2018年4月24日",
+      date: "2018/4/24",
       location: "古风",
       images: [
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Antiquity/DOU_1592.jpg!gallery",
@@ -87,7 +87,7 @@ Page({
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Antiquity/DOU_1460.jpg!gallery",
       ]
     },{
-      date: "2018年4月24日",
+      date: "2018/4/24",
       location: "内景棚拍",
       images: [
         "http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery",

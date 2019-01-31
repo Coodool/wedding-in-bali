@@ -1,35 +1,18 @@
 /* pages/gallery/gallery.wxss */
 page {
-  background-color: #e8e8e8;
+  background-color: #ffc53d;
 }
 
-.section {
-  padding: 16px 30rpx 0px;
-}
-
-.section:last-of-type {
-  padding-bottom: 16px;
-}
-
-.date-wrapper {
-  text-align: center;
-  margin: 0 auto 8px;
-}
-
-.date {
-  color: #fafafa;
-  display: inline-block;
-  padding: 0px 8px;
-  border-radius: 3px;
-  font-size: 12px;
-  line-height: 2em;
-  background-color: #bfbfbf;
+.container {
+  padding: 12px 16px;
 }
 
 .card {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #8c8c8c;
   overflow: hidden;
+  margin-bottom: 24px;
 }
 
 .image-wrapper {
@@ -47,4 +30,5 @@ image {
   justify-content: space-between;
   height: 50px;
   align-items: center;
+  background-color: #fafafa;
 }

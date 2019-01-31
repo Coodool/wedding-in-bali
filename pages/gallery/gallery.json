@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "婚纱"
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#ffc53d"
 }
