@@ -1,0 +1,27 @@
+<!--pages/baggage/baggage.wxml-->
+<view class="container">
+  <view class="panel">
+    <view class="content">
+      <view class="title">物品清单</view>
+      <view><checkbox/><text>出门必备（身份证/手机/小额现金/银行卡）</text></view>
+      <view><checkbox/><text>过关材料（护照/机票行程单/酒店预定单）</text></view>
+      <view><checkbox/><text>电子数码（充电器/耳机/相机/充电宝）</text></view>
+      <view><checkbox/><text>夏季换洗衣物（三四套短袖短裤）</text></view>
+      <view><checkbox/><text>鞋子（运动鞋/拖鞋/涉水鞋）</text></view>
+      <view><checkbox/><text>游泳装备（泳衣/泳裤/泳镜）</text></view>
+      <view><checkbox/><text>防晒装备（防晒霜/防晒服/遮阳帽）</text></view>
+      <view><checkbox/><text>常见药品（感冒药/肠胃药/创可贴/晕车药）</text></view>
+      <view><checkbox/><text>装X用品（墨镜/发蜡/人字拖/花裤衩/金链子）</text></view>
+      <view><checkbox/><text>其他物品（签字笔/雨伞）</text></view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="content">
+      <view class="title">行前准备</view>
+      <view><checkbox/><text>跟父母打好招呼（要钱）</text></view>
+      <view><checkbox/><text>跟领导搞好关系（请假）</text></view>
+      <view><checkbox/><text>跟对象解释明白（纯玩）</text></view>
+    </view>
+  </view>
+</view>

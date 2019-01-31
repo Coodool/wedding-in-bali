@@ -34,7 +34,7 @@ Page({
   },
 
   enter: function() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/index/index'
     });
   },
@@ -93,12 +93,12 @@ Page({
         success: ({userInfo}) => {
           this.login(userInfo);
 
-          //倒计时2s后进入应用
-          // this.enterAppTimer = setTimeout(function(){
-          //   wx.navigateTo({
-          //     url: '/pages/index/index'
-          //   });
-          // }, 2000);
+          // 倒计时2s后进入应用
+          this.enterAppTimer = setTimeout(function(){
+            wx.navigateTo({
+              url: '/pages/index/index'
+            });
+          }, 2000);
         },
         fail: ()=>{
           //显示点击进入按钮

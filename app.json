@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/loading/loading",
-    "pages/map/map",
     "pages/index/index",
+    "pages/help/help",
+    "pages/baggage/baggage",
+    "pages/map/map",
     "pages/journey/journey",
     "pages/live/live",
     "pages/guest/guest",
-    "pages/gallery/gallery",
-    "pages/help/help"
+    "pages/gallery/gallery"
   ],
   "permission": {
     "scope.userLocation": {
@@ -21,5 +22,9 @@
     "navigationBarTitleText": "巴厘岛婚礼",
     "navigationBarTextStyle": "white"
   },
-  "navigateToMiniProgramAppIdList": ["wx28fe04e3082fa934", "wxb1070eabc6f9107e"]
+  "navigateToMiniProgramAppIdList": [
+    "wx28fe04e3082fa934",
+    "wxb1070eabc6f9107e",
+    "wxc923b054dba2f2a4"
+  ]
 }

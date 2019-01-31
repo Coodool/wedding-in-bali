@@ -17,4 +17,11 @@
       <view>{{item.text}}</view>
     </view>
   </view>
+
+  <view class="panel-container">
+    <view class="panel travel-panel" wx:for="{{appTool}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
+      <image class="icon" mode="aspectFit" src="/images/index/{{item.icon}}" />
+      <view>{{item.text}}</view>
+    </view>
+  </view>
 </view>

@@ -6,16 +6,20 @@ Page({
    */
   data: {
     mainPanel: [
-      { text: "嘉宾", icon: "guest.png", nav: "/pages/guest/guest"},
-      { text: "婚纱", icon: "gallery.png", nav: "/pages/gallery/gallery"},
-      { text: "旅程", icon: "travel.png", nav: "/pages/journey/journey"},
+      { text: "现场嘉宾", icon: "guest.png", nav: "/pages/guest/guest"},
+      { text: "婚纱照", icon: "gallery.png", nav: "/pages/gallery/gallery"},
     ],
     travelPanel: [
+      { text: "旅程", icon: "travel.png", nav: "/pages/journey/journey"},
       { text: "地图", icon: "map.png", nav: "/pages/map/map"},
-      { text: "汇率", icon: "exchange.png", appid: "wx28fe04e3082fa934"},
-      { text: "翻译", icon: "translate.png", appid: "wxb1070eabc6f9107e"},
-      { text: "帮助", icon: "help.png", nav: "/pages/help/help"}
-    ]
+      { text: "清单", icon: "baggage.png", nav: "/pages/baggage/baggage"},
+      { text: "帮助", icon: "help.png", nav: "/pages/help/help"},
+    ],
+    appTool: [
+      { text: "汇率转换", icon: "exchange.png", appid: "wx28fe04e3082fa934"},
+      { text: "翻译工具", icon: "translate.png", appid: "wxb1070eabc6f9107e"},
+      { text: "点菜助手", icon: "menu-translate.png", appid: "wxc923b054dba2f2a4"},
+    ],
   },
 
   clickPanel: function (event) {
