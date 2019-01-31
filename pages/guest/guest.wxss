@@ -1,13 +1,17 @@
 /* pages/guest/guest.wxss */
 page {
-  background-color: #e8e8e8;
+  background-color: #1890ff;
+}
+
+.container {
+  padding: 12px 16px;
 }
 
 .section {
-  /* margin: 30rpx; */
   background-color: #fff;
-  /* box-shadow: 0px 0px 5px #bfbfbf; */
-  /* border-radius: 5px; */
+  box-shadow: 0px 0px 10px #8c8c8c;
+  border-radius: 8px;
+  margin-bottom: 12px;
   padding: 12px 30rpx;
   display: flex;
 }

@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "嘉宾"
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#1890ff"
 }
