@@ -6,14 +6,14 @@
 
   <view class="panel-container">
     <view class="panel main-panel" wx:for="{{mainPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}">
-      <i class="iconfont icon-{{item.icon}}"></i>
+      <image class="icon" mode="aspectFit" src="/images/index/{{item.icon}}" />
       <view>{{item.text}}</view>
     </view>
   </view>
 
   <view class="panel-container">
     <view class="panel travel-panel" wx:for="{{travelPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
-      <i class="iconfont icon-{{item.icon}}"></i>
+      <image class="icon" mode="aspectFit" src="/images/index/{{item.icon}}" />
       <view>{{item.text}}</view>
     </view>
   </view>

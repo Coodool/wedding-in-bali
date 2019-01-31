@@ -6,14 +6,15 @@ Page({
    */
   data: {
     mainPanel: [
-      { text: "嘉宾", icon: "guest", nav: "/pages/guest/guest"},
-      { text: "婚纱", icon: "gallery", nav: "/pages/gallery/gallery"},
+      { text: "嘉宾", icon: "guest.png", nav: "/pages/guest/guest"},
+      { text: "婚纱", icon: "gallery.png", nav: "/pages/gallery/gallery"},
+      { text: "旅程", icon: "travel.png", nav: "/pages/journey/journey"},
     ],
     travelPanel: [
-      { text: "旅程", icon: "travel-2", nav: "/pages/journey/journey"},
-      { text: "地图", icon: "map", nav: "/pages/map/map"},
-      { text: "汇率", icon: "exchange-rate", appid: "wx28fe04e3082fa934"},
-      { text: "求助", icon: "help-3", nav: "/pages/help/help"}
+      { text: "地图", icon: "map.png", nav: "/pages/map/map"},
+      { text: "汇率", icon: "exchange.png", appid: "wx28fe04e3082fa934"},
+      { text: "翻译", icon: "translate.png", appid: "wxb1070eabc6f9107e"},
+      { text: "帮助", icon: "help.png", nav: "/pages/help/help"}
     ]
   },
 

@@ -31,39 +31,31 @@ page {
 }
 
 .panel {
-  background-color: #fff;
+  background-color: #fff1f0;
   border-radius: 10rpx;
   margin: 12.5rpx;
   flex-grow: 1;
   font-size: 12px;
   display: flex;
   align-items: center;
-}
-
-/* 每一行留有650rpx的空间 */
-
-.main-panel {
-  height: 80px;
-  flex-basis: 10px;
-  font-size: 16px;
-}
-
-.main-panel .iconfont {
-  font-size: 80rpx;
-  color: #595959;
-  margin-right: 12px;
-  margin-left: 20%;
-}
-
-.travel-panel {
   height: 150rpx;
   flex-basis: 10px;
   justify-content: center;
   flex-direction: column;
 }
 
-.travel-panel .iconfont {
-  font-size: 60rpx;
-  color: #595959;
-  margin-bottom: 5rpx;
+/* 每一行留有650rpx的空间 */
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.main-panel {
+  /* font-size: 16px; */
+}
+
+
+
+.travel-panel {
 }
