@@ -1,4 +1,6 @@
 // pages/gallery/gallery.js
+const AV = require('../../libs/av-weapp-min.js');
+
 Page({
 
   /**
@@ -163,6 +165,24 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    var ShareLog = AV.Object.extend('ShareLog');
+    var log = new ShareLog();
+    const user = AV.User.current().toJSON();
+    const pageStack = getCurrentPages();
+    const currentPage = pageStack[pageStack.length - 1];
+    log.set({
+      nickName: user.nickName,
+      tag: user.tag,
+      city: user.city,
+      gender: user.gender,
+      avatarUrl: user.avatarUrl,
+      page: currentPage.route
+    });
+    log.save().then(function() {
+        console.log("分享日志记录成功！");
+      }, function(error) {
+    });
+
     return {
       title: 'Thanks for Your Witness',
       imageUrl: 'https://wx-1256884783.cos.ap-guangzhou.myqcloud.com/transpond.jpg'
