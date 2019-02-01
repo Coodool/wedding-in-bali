@@ -215,7 +215,7 @@ Page({
         })
       } else if ( e.detail.message ) {
         const log = [...this.data.log];
-        //最多显示8行拉流状态日志
+        //最多显示3行拉流状态日志
         if( log.length >= 3 ){
           log.shift();
         }

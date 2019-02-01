@@ -7,42 +7,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-    forecast: [],
-    current: null,
+    weather: new Array(2).fill({}),
   },
 
-  getCurrentWeather(){
+  callWeatherApi(city, index){
     wx.request({
-      url:'https://owmapi.yearito.cn/data/2.5/weather?q=Kuta,id&units=metric&lang=zh_cn&appid=a48c0d6720813da9fe66334760140b2c',
+      url: `https://owmapi.yearito.cn/data/2.5/weather?q=${city}&units=metric&lang=zh_cn&appid=a48c0d6720813da9fe66334760140b2c`,
       success: (result)=>{
         const retdata = result.data;
+        const data = {
+          icon: retdata.weather[0].icon.slice(0,2),
+          description: retdata.weather[0].description,
+          temp: parseInt(retdata.main.temp),
+          lastUpdate: moment(retdata.dt, 'X').format("HH:mm:ss"),
+          cityName: retdata.name,
+        }
+        this.data.weather[index].current = data;
         this.setData({
-          current: {
-            icon: retdata.weather[0].icon.slice(0,2),
-            description: retdata.weather[0].description,
-            temp: parseInt(retdata.main.temp),
-            lastUpdate: moment(retdata.dt, 'X').format("HH:mm:ss"),
-            cityName: retdata.name,
-          }
-        })
-        wx.stopPullDownRefresh();
+          weather: this.data.weather
+        });
       },
-      fail: console.error
+      fail: (e)=>{
+        console.log(e);
+      },
+      complete: ()=>{
+        wx.stopPullDownRefresh();
+      }
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  callForecastApi(city, index){
     wx.request({
-      url:'https://owmapi.yearito.cn/data/2.5/forecast?q=Kuta,id&units=metric&lang=zh_cn&appid=a48c0d6720813da9fe66334760140b2c',
+      url: `https://owmapi.yearito.cn/data/2.5/forecast?q=${city}&units=metric&lang=zh_cn&appid=a48c0d6720813da9fe66334760140b2c`,
       success: (result)=>{
         const retdata = result.data;
         let data = [];
         retdata.list.forEach( item => {
-          // const date = moment(item.dt, "X").format("MM-DD");
-          const date = item.dt_txt.slice(5,10);
+          // const date = item.dt_txt.slice(5,10);
+          const date = moment(item.dt, "X").format("MM-DD");
+          if( date == moment().format("MM-DD") ) {
+            return ;
+          }
+
           const index = data.findIndex(i=>i.date == date );
           if( index == -1 ) {
             data.push({
@@ -60,15 +66,27 @@ Page({
           temp_min: Math.min(...item.temp),
           temp_max: Math.max(...item.temp),
           icon: item.icon[Math.floor(item.icon.length/2)]
-        }))
+        })).slice(0,4)
+
+        this.data.weather[index].forecast = data;
         this.setData({
-          forecast: data
+          weather: this.data.weather
         })
       },
-      fail: console.error
+      fail: (e)=>{
+        console.log(e);
+      },
     })
+  },
 
-    this.getCurrentWeather();
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.callWeatherApi('Kuta,id', 0);
+    this.callForecastApi('Kuta,id', 0);
+    this.callWeatherApi('Ubud,id', 1);
+    this.callForecastApi('Ubud,id', 1);
   },
 
   /**
@@ -103,7 +121,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getCurrentWeather();
+    this.callWeatherApi('Kuta,id', 0);
+    this.callWeatherApi('Ubud,id', 1);
   },
 
   /**

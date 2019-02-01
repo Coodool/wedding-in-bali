@@ -1,24 +1,35 @@
 <!--pages/weather/weather.wxml-->
-<view class="container">
-  <view class="card">
-    <view wx:if="{{current}}" class="current">
-      <view class="center">
-        <image class="weather-icon" src="/images/weather/{{current.icon}}.png" mode="aspectFit" />
-        <view class="temp">{{current.temp}}° </view>
-        <view class="describe">{{current.description}}</view>
-      </view>
-      <view class="footer-info">
-        <view class="city-name">城市：{{current.cityName}}</view>
-        <view class="last-update">更新时间：{{current.lastUpdate}}</view>
-      </view>
-    </view>
 
-    <view wx:if="{{forecast}}" class="forecast">
-      <view class="one-day" wx:for="{{forecast}}" wx:key="unique">
-        <view class="date">{{item.date}}</view>
-        <image class="weather-icon" src="/images/weather/{{item.icon}}.png" mode="aspectFit" />
-        <view class="temp">{{item.temp_min}}°/{{item.temp_max}}°</view>
+<swiper
+  class="swiper"
+  duration="300"
+  indicator-dots="true"
+  indicator-active-color="rgba(0,0,0,0.7)"
+>
+  <swiper-item wx:for="{{weather}}" wx:key="unique">
+    <view class="container">
+      <view class="card">
+        <view wx:if="{{item.current && item.forecast}}" class="content">
+          <view class="current">
+            <image class="weather-icon" src="/images/weather/{{item.current.icon}}.png" mode="aspectFit" />
+            <view class="temp">{{item.current.temp}}° </view>
+            <view class="describe">{{item.current.description}}</view>
+          </view>
+
+          <view class="footer-info">
+            <view class="city-name">城市：{{item.current.cityName}}</view>
+            <view class="last-update">更新时间：{{item.current.lastUpdate}}</view>
+          </view>
+
+          <view class="forecast">
+            <view class="one-day" wx:for="{{item.forecast}}" wx:key="unique" wx:for-item="day">
+              <view class="date">{{day.date}}</view>
+              <image class="weather-icon" src="/images/weather/{{day.icon}}.png" mode="aspectFit" />
+              <view class="temp">{{day.temp_min}}°~{{day.temp_max}}°</view>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
-  </view>
-</view>
+  </swiper-item>
+</swiper>
