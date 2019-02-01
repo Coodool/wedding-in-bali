@@ -43,4 +43,5 @@ image {
   text-align: justify;
   color: #8c8c8c;
   font-size: 14px;
+  line-height: 1.5em;
 }

@@ -209,7 +209,8 @@ Page({
     console.log('live-player code:', e.detail);
     if( this.data.showLog ) {
       //视频播放开始后关闭日志显示
-      if( e.detail.code == '2004' ){
+      const code = e.detail.code;
+      if( code == '2004' || code == '2002' ){
         this.setData({
           showLog: false,
         })

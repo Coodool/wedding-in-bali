@@ -68,7 +68,8 @@ page {
 
 .tips text {
   color: #262626;
-  background-color: #fafafa;
+  background-color: rgba(0,0,0,0);
+  /* border: 1px solid #eea2a4; */
   padding: 6px 12px;
   line-height: 18px;
   border-radius: 4px;
@@ -79,11 +80,14 @@ page {
   top: 220px;
   bottom: 48px;
   width: 100%;
+  /* background-color: #eea2a4; */
+  background: center/contain #fff url('https://wx-1256884783.picgz.myqcloud.com/chatroom-background.jpg') no-repeat;
 }
 
 .msg {
-  margin: 16px 12px;
+  margin: 16px 48px 16px 12px;
   display: flex;
+  line-height:
 }
 
 .avatar {
@@ -125,6 +129,8 @@ page {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;
+  border: 1px solid #eea2a4;
+  line-height: 1.5em;
 }
 
 /* 输入框 */
@@ -133,16 +139,17 @@ page {
   position: fixed;
   width: 100%;
   bottom: 0px;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: #fff;
   height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1rpx solid #bfbfbf;
+  border-top: 1rpx solid #d9d9d9;
 }
 
 .input-wrapper {
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   align-items: center;
   width: 100%;
@@ -161,6 +168,6 @@ page {
   /* color: #595959; */
   color: #8c8c8c;
   display: inline-block;
-  padding: 0px 8px;
-  border-left: 1rpx solid #e8e8e8;
+  padding: 0px 8px 0px 12px;
+  border-left: 1rpx solid #d9d9d9;
 }

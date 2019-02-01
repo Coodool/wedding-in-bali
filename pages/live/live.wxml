@@ -48,7 +48,7 @@
   scroll-y="true"
   scroll-top="{{scrollTop}}"
 >
-  <view class="tips" wx:if="{{msgEx.length == 0}}"><text>聊天室加载中...</text></view>
+  <view class="tips" wx:if="{{msgEx.length == 0}}"><text>聊天室加载中</text></view>
   <view id="chatList" style="visibility: {{scrollTop == 0 ? 'hidden': 'visible'}}">
     <view class="msg" wx:for="{{msgEx}}" wx:key="unique">
       <image class="avatar" src="{{item.avatarUrl}}"/>
