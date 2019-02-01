@@ -50,13 +50,15 @@ Page({
     }).catch(console.error);
 
     //登陆日志
-    var LoginLog = AV.Object.extend('LoginLog');
-    var log = new LoginLog();
-    log.set(userInfo);
-    log.save().then(function() {
-      console.log("登陆日志写入成功！")
-    }, function(error) {
-    });
+    if( user.toJSON().gender != 0 ){
+      var LoginLog = AV.Object.extend('LoginLog');
+      var log = new LoginLog();
+      log.set(userInfo);
+      log.save().then(function() {
+        console.log("登陆日志写入成功！")
+      }, function(error) {
+      });
+    }
 
     //云开发记录用户
     wx.cloud.init({

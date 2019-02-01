@@ -21,15 +21,15 @@ App({
     AV.User.loginWithWeapp()
     .then(user => {
       // 调用小程序 API，得到用户信息
-      wx.getUserInfo({
-        success: ({userInfo}) => {
-          // 更新当前用户的信息
-          user.set(userInfo).save().then(user => {
-            // 成功，此时可在控制台中看到更新后的用户信息
-            this.globalData.user = user.toJSON();
-          }).catch(console.error);
-        }
-      });
+      // wx.getUserInfo({
+      //   success: ({userInfo}) => {
+      //     // 更新当前用户的信息
+      //     user.set(userInfo).save().then(user => {
+      //       // 成功，此时可在控制台中看到更新后的用户信息
+      //       this.globalData.user = user.toJSON();
+      //     }).catch(console.error);
+      //   }
+      // });
 
       //创建即时通信客户端
       return realtime.createIMClient(user)
