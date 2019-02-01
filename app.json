@@ -2,11 +2,11 @@
   "pages": [
     "pages/loading/loading",
     "pages/index/index",
+    "pages/live/live",
     "pages/weather/weather",
     "pages/journey/journey",
     "pages/baggage/baggage",
     "pages/gallery/gallery",
-    "pages/live/live",
     "pages/guest/guest",
     "pages/help/help",
     "pages/map/map"

@@ -14,13 +14,14 @@ Page({
   getCurrentWeather(){
     wx.request({
       url:'https://owmapi.yearito.cn/data/2.5/weather?q=Kuta,id&units=metric&lang=zh_cn&appid=a48c0d6720813da9fe66334760140b2c',
-      success: (retdata)=>{
+      success: (result)=>{
+        const retdata = result.data;
         this.setData({
           current: {
             icon: retdata.weather[0].icon.slice(0,2),
             description: retdata.weather[0].description,
             temp: parseInt(retdata.main.temp),
-            lastUpdate: moment(retdata.dt, 'X').format("hh:mm:ss"),
+            lastUpdate: moment(retdata.dt, 'X').format("HH:mm:ss"),
             cityName: retdata.name,
           }
         })
@@ -34,15 +35,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     wx.request({
-      url:'http://owmapi.yearito.cn/data/2.5/forecast?q=Kuta,id&units=metric&lang=zh_cn&appid=a48c0d6720813da9fe66334760140b2c',
-      success: (retdata)=>{
+      url:'https://owmapi.yearito.cn/data/2.5/forecast?q=Kuta,id&units=metric&lang=zh_cn&appid=a48c0d6720813da9fe66334760140b2c',
+      success: (result)=>{
+        const retdata = result.data;
         let data = [];
         retdata.list.forEach( item => {
           // const date = moment(item.dt, "X").format("MM-DD");
           const date = item.dt_txt.slice(5,10);
-          console.log(date);
           const index = data.findIndex(i=>i.date == date );
           if( index == -1 ) {
             data.push({
