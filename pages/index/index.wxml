@@ -1,6 +1,6 @@
 <!--pages/index/index.wxml-->
 <view class="container">
-  <image class="live-entry" mode="aspectFill" src="http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery" bindtap="clickPlay">
+  <image class="live" mode="aspectFill" src="http://wx-1256884783.picgz.myqcloud.com/Gallery/Indoor/DOU_1505.jpg!gallery" bindtap="clickPlay">
     <cover-image class="play" src="/images/live/o-play.png" />
   </image>
 
@@ -11,7 +11,7 @@
     </view>
   </view>
 
-  <view class="card travel-card">
+  <view class="travel travel-card card">
     <view class="travel-list" wx:for="{{travelPanel}}" wx:key="unique" bindtap="clickPanel" data-url="{{item.nav}}" data-appid="{{item.appid}}">
       <image class="icon" mode="aspectFit" src="/images/index/{{item.icon}}" />
       <view>{{item.text}}</view>
