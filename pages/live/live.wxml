@@ -27,22 +27,6 @@
   </cover-view>
 </live-player>
 
-<!-- 根据用户Tag返回标签背景色 -->
-<wxs module="tag">
-  var chooseColor = function( tag ) {
-    if( tag == "最帅的新郎" || tag == "最美的新娘" ){
-      return "#ff4d4f";
-    } else if ( tag == "现场嘉宾" ) {
-      return "#ffc53d";
-    } else if ( tag == "房管" ) {
-      return "#1890ff";
-    } else {
-      return "#bfbfbf";
-    }
-  }
-  module.exports.chooseColor = chooseColor;
-</wxs>
-
 <scroll-view
   class="chatroom"
   scroll-y="true"
@@ -55,7 +39,7 @@
       <view class="content">
         <view class="name-wrapper">
           <text class="name">{{item.nickName}}</text>
-          <text class="tag" wx:if="{{item.tag}}" style="background-color: {{tag.chooseColor(item.tag)}}">{{item.tag}}</text>
+          <text class="tag" wx:if="{{item.tag != 'default'}}" style="background-color: {{item.tagColor}}">{{item.tag}}</text>
         </view>
         <text class="text" selectable="true">{{item.text}}</text>
       </view>

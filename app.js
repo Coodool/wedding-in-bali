@@ -67,6 +67,22 @@ App({
 
       this.getChatMessages();
     })
+
+    //获取全局数据字典
+    var query = new AV.Query("Dictionary");
+    return query.select(['dataset','key','value'])
+      .find()
+      .then(result=>{
+        const dict = {};
+        result.forEach(item=>{
+          const data = item.toJSON();
+          if( !dict[data.dataset] ){
+            dict[data.dataset] = {};
+          }
+          dict[data.dataset][data.key] = data.value;
+        });
+        this.globalData.dict = dict;
+      })
   },
 
   //获取直播间聊天记录
@@ -102,6 +118,7 @@ App({
           message: requestData,
         })
         .then( data => {
+          console.log(data);
           this.globalData.msgEx.push(data);
           this.syncMsgToPage();
         }).catch(console.error);
@@ -120,5 +137,6 @@ App({
   globalData: {
     msgEx: [],
     user: null,
+    dict: {}
   }
 })

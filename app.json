@@ -1,14 +1,14 @@
 {
   "pages": [
     "pages/loading/loading",
-    "pages/index/index",
     "pages/live/live",
-    "pages/weather/weather",
-    "pages/journey/journey",
-    "pages/baggage/baggage",
-    "pages/gallery/gallery",
     "pages/guest/guest",
+    "pages/index/index",
+    "pages/weather/weather",
+    "pages/baggage/baggage",
     "pages/help/help",
+    "pages/journey/journey",
+    "pages/gallery/gallery",
     "pages/map/map"
   ],
   "permission": {

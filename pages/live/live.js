@@ -48,22 +48,23 @@ Page({
   onSendMessage() {
     if( this.data.inputContent && App.chatRoom ){
       App.chatRoom.send(new TextMessage(this.data.inputContent))
-      .then(message=>{
-        console.log("发送消息成功!");
-        this.setData({
-          inputContent: ''
-        });
-        const user = AV.User.current().toJSON();
-        const msg  = {
-          avatarUrl: user.avatarUrl,
-          nickName: user.nickName,
-          userid: user.objectId,
-          tag: user.tag,
-          text: message.text,
-        }
-        App.globalData.msgEx.push(msg);
-        this.updateMsgExt(App.globalData.msgEx);
-      }).catch(console.error);
+        .then(message=>{
+          console.log("发送消息成功!");
+          this.setData({
+            inputContent: ''
+          });
+          const user = AV.User.current().toJSON();
+          const msg  = {
+            avatarUrl: user.avatarUrl,
+            nickName: user.nickName,
+            userid: user.objectId,
+            tag: user.tag,
+            tagColor: App.globalData.dict.TAGCOLOR[user.tag],
+            text: message.text,
+          }
+          App.globalData.msgEx.push(msg);
+          this.updateMsgExt(App.globalData.msgEx);
+        }).catch(console.error);
     }
   },
 
