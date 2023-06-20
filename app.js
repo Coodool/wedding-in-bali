@@ -1,14 +1,16 @@
 //app.js
 const AV = require('/libs/av-weapp-min.js');
-const LiveQuery = require('/libs/av-live-query-weapp-min.js');
+// const LiveQuery = require('/libs/av-live-query-weapp-min.js');
 const { Realtime, TextMessage, Event } = require('/libs/realtime.weapp.min.js');
 
 var APP_ID = 'JWHVMPTd0CMswito1pqlGsyT-gzGzoHsz';
 var APP_KEY = 'NGODzzBtt7HpkCpXf00ng9Yl';
+var SERVER_URL = 'https://jwhvmptd.lc-cn-n1-shared.com';
 
 AV.init({
   appId: APP_ID,
-  appKey: APP_KEY
+  appKey: APP_KEY,
+  serverURLs: SERVER_URL
 });
 
 var realtime = new Realtime({
